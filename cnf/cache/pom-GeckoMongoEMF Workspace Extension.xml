@@ -1,0 +1,2751 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="GeckoMongoEMF Workspace Extension" increment="1683805474146">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License v1.0"/>
+      <attribute name="copyright" value="Data In Motion Consulting"/>
+      <attribute name="osgi.identity" value="org.gecko.emf.osgi.component"/>
+      <attribute name="documentation" value="https://gitlab.com/gecko.io/geckoEMF"/>
+      <attribute name="description" value="EMF OSGi integration"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.osgi.framework,org.osgi.service.component"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.osgi.component"/>
+      <attribute name="bundle-version" value="4.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.osgi"/>
+      <attribute name="version" value="3.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-515152649,782075789,-790523466,609167667,-26166762,-466515268,-2057550255,-1244598642,1211160233,604495126,239501423,1550206593,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore.resource.impl"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.osgi.component"/>
+      <attribute name="bundle-version" value="4.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.osgi.urihandler"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1494324455,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.eclipse.emf.ecore.resource.impl,org.eclipse.emf.ecore.util,org.gecko.emf.osgi"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.osgi.component"/>
+      <attribute name="bundle-version" value="4.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.osgi.resourceset"/>
+      <attribute name="version" value="3.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1531384336,6288046,2034577004,114860796,1979662409,420096480,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.ecore.resource,org.gecko.emf.osgi,org.osgi.framework"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.osgi.component"/>
+      <attribute name="bundle-version" value="4.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.osgi.factory"/>
+      <attribute name="version" value="3.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1546590972,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="4.0.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.emf.osgi.component"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="4.0.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.emf.osgi.component"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.geckoprojects.emf:org.gecko.emf.osgi.component"/>
+      <attribute name="from" value="org.geckoprojects.emf:org.gecko.emf.osgi.component:4.0.0"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.gecko.emf.osgi.component"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="4.0.0"/>
+      <attribute name="maven-groupId" value="org.geckoprojects.emf"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="emf.configurator">
+      <attribute name="nsURI" value="http://www.eclipse.org/emf/2003/XMLType,http://www.w3.org/XML/1998/namespace,http://www.eclipse.org/emf/2002/Ecore" type="List&lt;String&gt;"/>
+      <attribute name="name" value="ecore"/>
+      <attribute name="emf.configurator" value="epackage"/>
+    </capability>
+    <capability namespace="emf.configurator">
+      <attribute name="emf.configurator.name" value="ecore"/>
+      <attribute name="emf.configurator.contentType" value="org.eclipse.emf.ecore,org.eclipse.emf.emof,application/xmi,application/xml,application/octet-stream" type="List&lt;String&gt;"/>
+      <attribute name="emf.configurator.fileExtension" value="*,xml,xmi,ecore,emof,bin" type="List&lt;String&gt;"/>
+      <attribute name="emf.configurator" value="resourceSet"/>
+    </capability>
+    <capability namespace="emf.core">
+      <attribute name="emf.core" value="osgi"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="123047" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/geckoprojects/emf/org.gecko.emf.osgi.component/4.0.0/org.gecko.emf.osgi.component-4.0.0.jar"/>
+      <attribute name="osgi.content" value="A1C460D4060B5D835112CBEFE71A74DA81C9A8838A77701242EB0D46E4140DF3"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.eclipse.emf.ecore"/>
+      <attribute name="objectClass" value="org.eclipse.emf.ecore.EPackage$Registry" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.eclipse.emf.ecore.resource"/>
+      <attribute name="objectClass" value="org.eclipse.emf.ecore.resource.Resource$Factory$Registry" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.emf.osgi,org.gecko.emf.osgi"/>
+      <attribute name="objectClass" value="org.gecko.emf.osgi.EPackageConfigurator,org.gecko.emf.osgi.ResourceFactoryConfigurator" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.emf.osgi"/>
+      <attribute name="objectClass" value="org.gecko.emf.osgi.ResourceSetCache" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.emf.osgi"/>
+      <attribute name="objectClass" value="org.gecko.emf.osgi.ResourceSetConfigurator" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="org.gecko.emf.osgi.ResourceSetFactory" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.emf.osgi"/>
+      <attribute name="objectClass" value="org.gecko.emf.osgi.UriHandlerProvider" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.emf.osgi"/>
+      <attribute name="objectClass" value="org.gecko.emf.osgi.UriMapProvider" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="org.eclipse.emf.ecore.resource.ResourceSet" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.io)"/>
+      <attribute name="osgi.wiring.package" value="java.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.invoke)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.invoke"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.net)"/>
+      <attribute name="osgi.wiring.package" value="java.net"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
+      <attribute name="osgi.wiring.package" value="java.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.concurrent)"/>
+      <attribute name="osgi.wiring.package" value="java.util.concurrent"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.concurrent.atomic)"/>
+      <attribute name="osgi.wiring.package" value="java.util.concurrent.atomic"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.concurrent.locks)"/>
+      <attribute name="osgi.wiring.package" value="java.util.concurrent.locks"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.function)"/>
+      <attribute name="osgi.wiring.package" value="java.util.function"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.logging)"/>
+      <attribute name="osgi.wiring.package" value="java.util.logging"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.stream)"/>
+      <attribute name="osgi.wiring.package" value="java.util.stream"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.notify)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.resource)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.resource.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.xmi.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xmi.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.xml.namespace)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xml.namespace"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.xml.type)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xml.type"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.osgi)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.osgi"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.osgi.factory)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.osgi.factory"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.osgi.urihandler)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.osgi.urihandler"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.cm)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.cm"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.component"/>
+    </requirement>
+    <requirement namespace="emf.configurator">
+      <directive name="filter" value="(&amp;(name=ecore)(emf.configurator=epackage))"/>
+    </requirement>
+    <requirement namespace="emf.core">
+      <directive name="filter" value="(&amp;(emf.core=osgi)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.emf.ecore.EPackage$Registry)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.emf.ecore.EPackage$Registry)"/>
+      <directive name="effective" value="active"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.emf.ecore.resource.Resource$Factory$Registry)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.osgi.EPackageConfigurator)"/>
+      <directive name="effective" value="active"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.osgi.ResourceFactoryConfigurator)"/>
+      <directive name="effective" value="active"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.osgi.ResourceSetConfigurator)"/>
+      <directive name="effective" value="active"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.osgi.ResourceSetFactory)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.osgi.UriHandlerProvider)"/>
+      <directive name="effective" value="active"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.osgi.UriMapProvider)"/>
+      <directive name="effective" value="active"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.osgi.service.cm.ConfigurationAdmin)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Apache-2.0; link=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;; description=&quot;Apache License, Version 2.0&quot;"/>
+      <attribute name="copyright" value="Copyright (c) OSGi Alliance (2000, 2018). All Rights Reserved."/>
+      <attribute name="osgi.identity" value="org.osgi.util.function"/>
+      <attribute name="documentation" value="https://www.osgi.org/"/>
+      <attribute name="description" value="OSGi Companion Code for org.osgi.util.function Version 1.1.0"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.1.0.201802012106" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.osgi.util.function"/>
+      <attribute name="bundle-version" value="1.1.0.201802012106" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.function"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-503125994,1445582840,655935895,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.1.0.201802012106" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.osgi.util.function"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.1.0.201802012106" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.osgi.util.function"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.osgi:org.osgi.util.function"/>
+      <attribute name="from" value="org.osgi:org.osgi.util.function:1.1.0"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.osgi.util.function"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="1.1.0"/>
+      <attribute name="maven-groupId" value="org.osgi"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="14053" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/osgi/org.osgi.util.function/1.1.0/org.osgi.util.function-1.1.0.jar"/>
+      <attribute name="osgi.content" value="83D52D198F8BDD4CD9A02ECB7F05E01E0D59D1C960256DB6DCCD16962F79D7C5"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.7))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License v1.0"/>
+      <attribute name="copyright" value="Bryan Hunt, Data In Motion Consulting"/>
+      <attribute name="osgi.identity" value="org.gecko.emf.mongo.api"/>
+      <attribute name="documentation" value="https://gitlab.com/gecko.io/geckoMongoEMF"/>
+      <attribute name="description" value="EMF Mongo API"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="6.0.5" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.client,org.bson,org.eclipse.emf.ecore,org.eclipse.emf.ecore.impl"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.api"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.model"/>
+      <attribute name="version" value="2.1.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1319971867,-1830778279,-1066733119,1425955268,-781912835,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl,org.eclipse.emf.ecore,org.eclipse.emf.ecore.util,org.gecko.emf.mongo.model"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.api"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.model.util"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1467616732,-2135587939,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.client,org.bson,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.gecko.emf.mongo.model"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.api"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo"/>
+      <attribute name="version" value="5.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1611070187,946598619,-622062112,587793354,1903449149,415178366,-7450167,127242,1913639392,1328673615,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.api"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.annotations"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-93143153,1657765794,-720407018,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.emf.mongo.api"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.emf.mongo.api"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.geckoprojects.mongo:org.gecko.emf.mongo.api"/>
+      <attribute name="from" value="org.geckoprojects.mongo:org.gecko.emf.mongo.api:6.0.5"/>
+      <attribute name="version" value="6.0.5" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.gecko.emf.mongo.api"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="6.0.5"/>
+      <attribute name="maven-groupId" value="org.geckoprojects.mongo"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="64201" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/geckoprojects/mongo/org.gecko.emf.mongo.api/6.0.5/org.gecko.emf.mongo.api-6.0.5.jar"/>
+      <attribute name="osgi.content" value="EB6FC36789E836E944D405A93BD4D80A7A88E29F28E777BA0292E10414FAB656"/>
+    </capability>
+    <capability namespace="osgi.unresolvable"/>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.mongodb.client)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.bson)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.bson"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.bson.types)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.bson.types"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.notify)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.notify.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.plugin)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.plugin"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.resource)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.mongo.model)(version&gt;=2.1.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.model"/>
+    </requirement>
+    <requirement namespace="org.gecko.osgi.emf.persistence">
+      <directive name="filter" value="(&amp;(org.gecko.osgi.emf.persistence=mongo)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.unresolvable">
+      <directive name="filter" value="(&amp;(must.not.resolve=*)(!(must.not.resolve=*)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Apache-2.0; link=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;; description=&quot;Apache License, Version 2.0&quot;"/>
+      <attribute name="copyright" value="Copyright (c) OSGi Alliance (2000, 2018). All Rights Reserved."/>
+      <attribute name="osgi.identity" value="org.osgi.util.pushstream"/>
+      <attribute name="documentation" value="https://www.osgi.org/"/>
+      <attribute name="description" value="OSGi Companion Code for org.osgi.util.pushstream Version 1.0.0"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.0.0.201802012107" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.util.function,org.osgi.util.promise"/>
+      <attribute name="bundle-symbolic-name" value="org.osgi.util.pushstream"/>
+      <attribute name="bundle-version" value="1.0.0.201802012107" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.pushstream"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1387331047,768090712,80204913,-32514724,-593700069,-156045479,1517214195,-92046430,1616637168,-689270382,2035398868,1211388800,141278102,-42137669,-702313638,-973053215,931455137,-1957542736,-1492874930,343276395,303296435,1934594568,679379331,-187070504,-1408611415,-1050860183,1430162738,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.0.0.201802012107" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.osgi.util.pushstream"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.0.0.201802012107" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.osgi.util.pushstream"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.osgi:org.osgi.util.pushstream"/>
+      <attribute name="from" value="org.osgi:org.osgi.util.pushstream:1.0.0"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.osgi.util.pushstream"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="1.0.0"/>
+      <attribute name="maven-groupId" value="org.osgi"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="132257" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/osgi/org.osgi.util.pushstream/1.0.0/org.osgi.util.pushstream-1.0.0.jar"/>
+      <attribute name="osgi.content" value="F2A69E3F259EF719A9D5BA4068BEB7AAF1A945A5A1ADF306DF525D5739929258"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.function)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.function"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.promise)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.promise"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE/compact1)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.annotations,com.mongodb.bulk,com.mongodb.client,com.mongodb.client.model,com.mongodb.connection,com.mongodb.event,com.mongodb.lang,com.mongodb.selector,javax.net,javax.net.ssl,org.bson,org.bson.codecs,org.bson.codecs.configuration,org.bson.codecs.pojo.annotations,org.bson.conversions,org.bson.io,org.bson.json,org.bson.types"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-2108934686,1895597947,719403620,-818081412,1779350115,-1530413151,1481318064,364634058,-1694845077,-889998928,2082140959,64279661,790446983,118548539,208639234,-546258981,389716506,1303353657,-259753910,-163722916,1274325665,64671819,1570741235,927457064,-1591376690,26472623,2029715318,2081052624,2174,1225474454,381497059,-8280921,2100137404,966698095,1075657160,-1357805452,-1272565388,-379366938,-898392271,56826505,115451972,765799102,1205608113,1264233580,1462762819,-946814627,1817620665,-1323740726,-1800281734,943011053,713517750,64847669,-200353311,558486258,-1655494716,-1414907675,-269741635,579683258,852870459,-42820858,1443660660,1445582840,765286380,-962020987,1383146870,-1896100489,239898834,1385064874,-1381185840,-95554319,719622139,-500422871,-221029021,-2127840820,198776957,74526932,2047719638,-1969845653,-1645338177,-1208724144,450516959,-1700195582,-2102764755,-2108923336,2061876409,-494111251,1747909707,-1030761819,-804409226,-1514230416,1282960859,2134197426,-1582329976,-646133606,-33439842,1369792289,1053553383,445903121,-369783828,-1575938262,-1899613605,-1425411461,-379289384,1039202268,1448199848,-217030914,-1954143950,-1735943765,-11395977,-1337037598,-266176520,-1093019336,1803555610,1094909220,1462732986,-500387898,2064415676,1838731731,557850759,1879477258,-1616898662,1158999443,-1506788559,-1026126680,270454769,-491319640,-1204820661,664334683,189204796,626594577,1617609881,83834,-1797385592,891404015,663258544,-803153410,-1181488763,2065252856,-17387008,-574203991,-1788725655,398703974,86655093,-468236831,1419780263,362067822,1423723870,1333295497,-323568176,-1257303876,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.annotations"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="2066960,-694011550,-1446791222,808454359" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.async"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.assertions"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-209934895" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.async"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="533841716,673203722,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.async,com.mongodb.connection,com.mongodb.session"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.binding"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="161728645,-1041940640,1160672423,532730645,206691347,937967832,-1477296515,-116855059,927588898,434025988,-225332405,21952697,820232175,427189884,-572770237,-787572447,-848323895,-1056013,555785786,-1527481914,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.client.model,org.bson"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.bulk"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="118548539,-259753910,-163722916,1689882180,1840350589,1383146870,398703974,1419780263,2622298,-323568176" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.annotations,com.mongodb.bulk,com.mongodb.client.model,com.mongodb.client.model.changestream,com.mongodb.client.result,com.mongodb.lang,com.mongodb.session,org.bson,org.bson.codecs.configuration,org.bson.conversions"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="273495857,-83699710,-1090745301,1671356334,1493215595,-2063063159,-947266100,322318580,-843155372,-1645338177,534124180,690012818,-1636744886,259035759,-347912858,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.annotations,com.mongodb.client,com.mongodb.client.gridfs.model,com.mongodb.client.model,com.mongodb.lang,org.bson,org.bson.conversions,org.bson.types"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.gridfs"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1838290307,2087533117,-1152424554,-1330783301,-1430889349,2126838686,1453642462,-890131660,1461962612,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.client.gridfs.model,org.bson,org.bson.codecs,org.bson.codecs.configuration"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.gridfs.codecs"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1737058951,496262552,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.lang,org.bson,org.bson.types"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.gridfs.model"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-2131600351,-1967160893,-2008506673,-1191861910,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.binding,com.mongodb.client,com.mongodb.client.model,com.mongodb.client.model.changestream,com.mongodb.connection,com.mongodb.internal.session,com.mongodb.lang,com.mongodb.operation,com.mongodb.session,org.bson,org.bson.codecs.configuration,org.bson.conversions"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.internal"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="732892401,-1911169726,1197364712,1398812223,-1582971942,-344825741,-1739107093,-1261555986,-1505150266,747295275,2106720379,-945240712,1415160356,-2113122207,-602724318,-586762925,159059094,-1625053634,-1335363554,1239169018,-297135799,280030732,976186676,-1550385036,1585775764,1313753920,160178675,656652341,1979462756,-761528193,1327235026,-417949393,-1437547324,1675163814,2099603405,-50348720,-1453122758,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.naming,javax.naming.spi"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.jndi"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="608109131" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.annotations,com.mongodb.client.model.geojson,com.mongodb.lang,org.bson,org.bson.conversions"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.model"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-366248755,863935620,573194149,1940574996,-811158617,1733817238,-1030098977,-978932348,1198459656,627643594,1424722884,-1165977932,-1822409526,1731818885,1897239780,1524820276,-1486241242,-1809458159,1895597947,-410706071,-126712047,1928997879,-531680041,447175370,409445039,-1390579612,-1130570584,-858283651,-1931315605,-1883580762,531636130,1040343881,1195842846,-1495599815,464905407,-25122177,-1069332658,-655285677,416980507,-1155837562,67634583,67875034,1870550031,-2022267282,1018258030,-1388521461,958308700,-435909436,-21501210,-1721324259,-1596084246,-832142555,810105819,310868425,-1794827084,-980309781,1254399621,399110454,-1571130985,580353849,-504817268,-687021856,1513711270,-1988192676,-1869143791,-638467432,-1271646212,1162457949,707794440,728639460,335529476,49473122,1498433303,-1680833174,-1324085621,-1962611190,1830205961,80072309,557860745,1247874333,398170401,1853815916,-1946463883,60100112,1300168933,-649169757,-1160438469,-700458064,1430223018,402389039,-1085178261,-498512955,-1184942436,1340580522,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.lang,org.bson,org.bson.codecs,org.bson.codecs.configuration,org.bson.codecs.pojo.annotations"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.model.changestream"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-404495189,-962892245,-1672629772,-97866518,890961185,-512807051,1074465619,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.annotations,com.mongodb.lang"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.model.geojson"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1027194018,1527684860,-914837582,1910664338,1950410960,1806700869,-627102946,-1065891849,-2116761119,-134491223,77292912,1267133722,1977262209,812449097,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.client.model.geojson,org.bson,org.bson.codecs,org.bson.codecs.configuration"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.model.geojson.codecs"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-2072320606,-1300049682,-1278689628,2128886054,1758373280,-1668252552,-564850223,-2009516136,799914591,77028021,-4772371,-1061248890,-1794682084,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.lang,org.bson"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.result"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-2130097360,1797576393,-638164536,1984671694,1617378151,-818362778,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.annotations,com.mongodb.async,com.mongodb.binding,com.mongodb.bulk,com.mongodb.event,com.mongodb.internal.connection,com.mongodb.lang,com.mongodb.selector,com.mongodb.session,javax.net,javax.net.ssl,org.bson,org.bson.codecs,org.bson.io,org.bson.types"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.connection"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="2030103762,782379610,1488254914,1895597947,1373565672,-781677967,-1541521504,-1754007517,1366754489,-1758221862,-269894117,655935895,-889276990,-1208994352,-1729059691,2099138589,526331956,1217813246,-1330731490,2087427257,-1767833987,-1624451535,364363493,-1821959325,-552535440,-922999655,1443747806,602941606,167556413,2125894645,-1000675114,972346519,2622298,-1625719334,-379602385,-1808122976,180173130,584804448" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.connection,io.netty.buffer,io.netty.channel,io.netty.channel.socket"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.connection.netty"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1151787955,-2005275351,1124436597,-1936390127,1645561648,1176252698,-1799424286,1905110984,1895597947,1569605666,771468016,-1631164929" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.diagnostics.logging"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1780320943,-2013470288,2006930627,1123091411" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.annotations,com.mongodb.connection,org.bson"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.event"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1451677268,-1080350936,1616209317,2010667182,-1505336639,-1578972388,2096614959,1569026294,1124246578,-385006337,618698790,-487404188,1643638980,967529240,2012816748,-1236856363,1010222768,-778459694,558265488,612304536,906147283,84478964,-185355259,-1856305394,930400353,-19596521,339278341,-1744589957,-1086666696,1417954603,1190005631,-1133599442,-1757295164,379115026,1144948210,514470199,2008190488,1248663106,1206187595,-1101550972,1670592293" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,org.bson,org.bson.types"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.gridfs"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="66816,2141177523,-280242377,-1828997235,-2008506673,667579956,490929907" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-405558666" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.async,com.mongodb.diagnostics.logging"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.async"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="778045391" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.authentication"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-661368035,-2087497708" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.build"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-911468772" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.client.model"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.client.model"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1252499261,1674709378" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.annotations,com.mongodb.async,com.mongodb.binding,com.mongodb.bulk,com.mongodb.connection,com.mongodb.event,com.mongodb.selector,com.mongodb.session,javax.net,javax.net.ssl,org.bson,org.bson.codecs,org.bson.io"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.connection"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="2104386630,1257614196,161728645,1543850783,-588600881,-1352007888,-1106173731,-1431931552,-1642020220,1668764712,-1681005229,789101798,-1805495506,546450889,1557232560,1207416881,-1635173642,-10558294,58611876,-1556083576,-879666604,-409586716,-814324073,530586227,890189124,640951993,-1456223652,1574637283,-901399645,-2014125698,-1052722291,604060893,-1842054172,763581838,-1939149530,-898392271,378815167,1624016101,707544713,2433570,490260048,-1671476816,42068567,77393802,-100332909,1610527788,268089402,-991323050,-2110049070,-2042858092,-1473631189,2100035353,536868228,-147367781,1152367727,-735105535,1758899396,-987831614,689439924,-1713404938,-1950612428,1549114300,250833283,1808585386,-1350578513,-1669335098,1124436597,1262965888,-1916209700,1043046413,199971683,-2008696027,151045270,177135434,1242378990,-668026735,1957844379,174980847,1501362759,-369932980,-1202876999,-748855429,-1258415857,-795035288,-1405942681,793312354,-394275028,1709548680,1541189598,5167521,-2025841190,598337219,-1087398572,1895597947,1236918570,64864098,1958109777,1843524403,899162661,539849886,1517189756,496791654,817643131,-1927724146,1906212841,2493500,-1409606140,1014751148,1688410027,-1207892858,-1732255169,-739799478,1607594848,992509423,1300944984,1150693879,1471389149,-948023870,-1903213928,-176614254,169741254,535090612,-498615444,936657325,-368864355,2013671215,1964892894,-1619230113,1280302224,-420700171,-340312924,417840671,-1284361097,289075347,1536098735,-880004968,957608748,-1266846320,119999731,1339508353,-1072957443,-1911086918,2606829,-486230296,257936094,-1120985439,775499507,-1411578153,155988224,-2036585609,753595757,-1888131312" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.dns"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="244192303" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.connection,com.mongodb.event"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.event"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1793831191,618698790,1294878391,1890179740,152328430,96296794" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.management"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.management.jmx"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1711972181" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.async,com.mongodb.bulk,com.mongodb.client.model,com.mongodb.connection,com.mongodb.internal.client.model,com.mongodb.operation,org.bson,org.bson.codecs.configuration,org.bson.conversions"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.operation"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1562215272,-1612552448,1997648908,1932657667,1353602311,1137218799" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.connection,com.mongodb.session,org.bson"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.session"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1926170086,-523220220,65203182,778747507,1222701764,778957935" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.thread"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-199601316" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.internal.validator"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="2099948580,-1991677472,1908328815,388541174" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.lang"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-507294252,1186919334,-1841323135" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.event"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.management"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1827915005,-589468992,349565123,-312521920,743789994,1724863289" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.annotations,com.mongodb.async,com.mongodb.binding,com.mongodb.bulk,com.mongodb.client.model,com.mongodb.client.model.changestream,com.mongodb.connection,com.mongodb.internal.client.model,com.mongodb.session,org.bson,org.bson.codecs"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.operation"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-496518311,-583263761,-747128184,-801404912,1867664138,-2069230392,-2022765169,579066769,428379076,1496091742,732496178,123773039,-921377852,-649406603,-1934109560,643405252,2023302368,-640821863,1147382544,83394090,1685832854,587805996,1624899516,115273069,334988704,738445678,1064711127,-1382593919,1788407988,-1202526994,741935451,1445643832,1656720714,1187969798,-1292294523,-42453537,502659443,1767498835,-1544506336,-1843056328,-794925651,988013955,-2087784928,-359615354,-1995922067,-1925313852,1447909340,-363126357,233445577,314354906,872061661,1103561124,-1358341363,477502309,-692726050,-1390901914,1804055153,-269433472,-1102494663,-1590521970,-381070238,-132732472,-1266947442,-1147356291,-366908121,-166013648,63956813,766376229,894907638,1279077390,-436448240,-976771721,-1502305359,-1144916859,455212364,-1277589870,907679029,-1453122758,528709784,-1568365798,2042326399,46392573,1218433852,1236926710,-1210742428,1637427113,1153081301,2119973361,457542693,1830922053,-1432155800,77858422,552809553,116282411,288206921,1871201918,532425587,1290095872,567217290,-742599576,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.annotations,com.mongodb.connection"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.selector"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1038667127,508561403,-1269296444,-333467181,-201209328,359882850,-1795127262" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.annotations,org.bson"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.session"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1090745301,-535692877,1721770585" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.util"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1848506733,-148523648,2286824,144310605,1805920740,1780334375,2061137720,-1880271725,2035961348,-1278323069,-1700264065,1705459132,-1226527204,1754645199,306762200,-327824384,857129880,-799052860,-1083522769,-1134935428,803676201,519316462,1639478893,1575610431,-428603540,2119288332,-1853535966,-876686173,-1907954326,1162103102,-1267525918,-1528437811,962682649,1711961681,2647074" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson.codecs,org.bson.codecs.configuration,org.bson.conversions,org.bson.io,org.bson.json,org.bson.types"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1678783089,2390765,80204913,682139829,837545061,2048496,-888351147,-950039750,-1113066444,32099596,756407359,-970482353,1297159523,897096550,2042262590,1726760925,-1826746839,-774378959,-126089644,1732224553,29315588,1757163079,1937069048,-1214232231,-293715509,-351956049,-1327307914,935698558,-1224744117,123106464,1936147438,406126280,2091552670,-711370239,209520332,-1819477410,-1819477315,1691259087,-70251587,2104304113,-466570101,1488917547,-459479843,1326935991,-419776135,-1995969814,-320391437,669057120,176693028,426963055,-277397951,-272935992,-200778522,1327118698,-1294035680,-1807864511,-164986205,-1384624154,2020032555,2003139049,926364987,-128118782,-1993241011,773726185,1295853600,-1184420656,-1397874110,1046887395,1908328815,73863,1846598409,-423492769,47208225,-214345901,-1222499513,148294400,-331680519,1558393224" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.assertions"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-209934895" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson,org.bson.codecs.configuration,org.bson.types"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.codecs"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="833292985,878752611,-496711441,-647004091,129242229,-900112146,-581598355,1644948581,-1157855490,1721872775,-1181858549,-1246562752,-1336568949,-1335419346,1539825301,63631448,-1511566503,-236527015,-842822491,1396017739,718585145,761326239,-460556468,1912985426,1647223381,-1467094738,-617618736,1665598542,105623792,-462045482,-1620765867,-2108073882,1591057541,-73186354,-670907763,850935305,-171550987,65282038,-862331622,1729096936,2078840400,-1087880156,1895597947,1801279723,-1936459877,-551905620,24118949,57285884,-1344905965,950596410,1785979864,-854652520,-95780188,-1786902347,2106074842,217700410,572614731,-119688613,-797121207,-1418102725,-1060447396,-1287957735,1970931763,-60079482,797664387,-761535206,131517029,1312166206,362375419,-1522107255,1640540172,1556545110" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson.codecs"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.codecs.configuration"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1560695511,1484597548,153649039,1813394439,1135601201,2110676563,1757000930,786743105,2582804,-14372992,-92346095" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson,org.bson.codecs,org.bson.codecs.configuration"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.codecs.jsr310"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-963975618,-117255467,-1792524834,1393426941,2078288816,1678948926" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson.codecs,org.bson.codecs.configuration"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.codecs.pojo"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1923644121,1686399153,-52222550,37460984,-954941388,-261933167,715162592,-1769010749,195843245,1386381608,2044153328,470006530,-432547466,-261669098,-2075090059,-2027082319,-252194192,-1555834441,-25107629,1108072467,1172634743,764475838,217700410,832977014,1070709221,145210066,-1511204846,1895597947,-1821429021,1782569820,1175298972,1843497010,2140779134,-561833538,-815965116,-237192652,-1544049977,205586012,-580291587,-1717451631,1751871483,-612160988,361074029,-1266682844" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.codecs.pojo.annotations"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1394055172,-489418132,1999143755,-575808510,1215361029" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson,org.bson.codecs.configuration"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.conversions"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="2080272" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.diagnostics"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1780320943,-2013470288,2006930627,1123091411" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.internal"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1982630255,1826157410,-1517104279" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson,org.bson.types"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.io"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1733339087,2070822,-1819479142,1450840455,-390924495,315430162,-452171583" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson,org.bson.types"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.json"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1654237568,-905756182,681609177,-567160082,-839762097,-2017408386,1774295140,980078425,-2133318482,-72870157,-1561783948,1836909924,726470994,-1444232667,-109486227,-1471177493,-1550055951,-1230635136,1959328616,-58585433,-1668511270,-2073342869,-1910486325,457041841,-293016060,-1678783089,2390765,-1892499477,-1900329304,1899149757,-2002357290,643887719,194979008,910937553,1833337003,-1737094245,1895597947,-771268386,379404533,-1285927653,1055590550,194134965,-892506049,-2075947069,-1044449681,484740117,-1331717430,963453795,-1485098667,1699429699,1561179606,1237254876,1502289754,1423411296,-2038719647,80204913,226077950,-1279490693,1537604286,1275234116" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson"/>
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.types"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-670092026,1297802428,1989867553,2105869,1155895434,-104258143,9271654,-1997290885,-1990200627,155139290,2134119734,-1803656776" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.util"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-690967933,-2029030736,-694011550,-2050817629,-1216934138,2147090443,-1739945662,2622298,2666181,958134835,930009007,-233836273,757060836,-1618685528,1895597947,2241838,-2018799047,-209108623,1445582840" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.mongodb.mongo-java-driver"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.9.1" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.mongodb.mongo-java-driver"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.mongodb:mongo-java-driver"/>
+      <attribute name="from" value="org.mongodb:mongo-java-driver:3.9.1"/>
+      <attribute name="version" value="3.9.1" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="mongo-java-driver"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="3.9.1"/>
+      <attribute name="maven-groupId" value="org.mongodb"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="2065743" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/mongodb/mongo-java-driver/3.9.1/mongo-java-driver-3.9.1.jar"/>
+      <attribute name="osgi.content" value="9B12B192F99896EC55F87767E7BBB2B7E3238D2414B058F1170F6D8E1C746E6E"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.crypto)"/>
+      <attribute name="osgi.wiring.package" value="javax.crypto"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.crypto.spec)"/>
+      <attribute name="osgi.wiring.package" value="javax.crypto.spec"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.management)"/>
+      <attribute name="osgi.wiring.package" value="javax.management"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.naming)"/>
+      <attribute name="osgi.wiring.package" value="javax.naming"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.naming.directory)"/>
+      <attribute name="osgi.wiring.package" value="javax.naming.directory"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.naming.spi)"/>
+      <attribute name="osgi.wiring.package" value="javax.naming.spi"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.net)"/>
+      <attribute name="osgi.wiring.package" value="javax.net"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.net.ssl)"/>
+      <attribute name="osgi.wiring.package" value="javax.net.ssl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.security.sasl)"/>
+      <attribute name="osgi.wiring.package" value="javax.security.sasl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.security.auth.callback)"/>
+      <attribute name="osgi.wiring.package" value="javax.security.auth.callback"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.ietf.jgss)"/>
+      <attribute name="osgi.wiring.package" value="org.ietf.jgss"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.netty.bootstrap)(version&gt;=4.1.0)(!(version&gt;=5.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="io.netty.bootstrap"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.netty.buffer)(version&gt;=4.1.0)(!(version&gt;=5.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="io.netty.buffer"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.netty.channel)(version&gt;=4.1.0)(!(version&gt;=5.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="io.netty.channel"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.netty.channel.nio)(version&gt;=4.1.0)(!(version&gt;=5.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="io.netty.channel.nio"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.netty.channel.socket)(version&gt;=4.1.0)(!(version&gt;=5.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="io.netty.channel.socket"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.netty.channel.socket.nio)(version&gt;=4.1.0)(!(version&gt;=5.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="io.netty.channel.socket.nio"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.netty.handler.ssl)(version&gt;=4.1.0)(!(version&gt;=5.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="io.netty.handler.ssl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.netty.handler.timeout)(version&gt;=4.1.0)(!(version&gt;=5.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="io.netty.handler.timeout"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=io.netty.util.concurrent)(version&gt;=4.1.0)(!(version&gt;=5.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="io.netty.util.concurrent"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.xerial.snappy)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.xerial.snappy"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.slf4j)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.slf4j"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jnr.unixsocket)(version&gt;=0.18.0)(!(version&gt;=1.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="jnr.unixsocket"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License v1.0"/>
+      <attribute name="copyright" value="Data In Motion Consulting"/>
+      <attribute name="osgi.identity" value="org.gecko.emf.mongo.pushstream"/>
+      <attribute name="documentation" value="https://gitlab.com/gecko.io/geckoMongoEMF"/>
+      <attribute name="description" value="EMF Mongo implementation for using pushstreams as result"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="6.0.5" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.pushstream"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.pushstream.constants"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-941121087,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.emf.mongo.pushstream"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.emf.mongo.pushstream"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.geckoprojects.mongo:org.gecko.emf.mongo.pushstream"/>
+      <attribute name="from" value="org.geckoprojects.mongo:org.gecko.emf.mongo.pushstream:6.0.5"/>
+      <attribute name="version" value="6.0.5" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.gecko.emf.mongo.pushstream"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="6.0.5"/>
+      <attribute name="maven-groupId" value="org.geckoprojects.mongo"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="org.gecko.osgi.emf.persistence.extension">
+      <attribute name="org.gecko.osgi.emf.persistence.extension" value="pushstream"/>
+      <attribute name="type" value="mongo"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="27161" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/geckoprojects/mongo/org.gecko.emf.mongo.pushstream/6.0.5/org.gecko.emf.mongo.pushstream-6.0.5.jar"/>
+      <attribute name="osgi.content" value="114DA6E4C9EC04474DFB02295C81EB476FDAC48EC4CDACB07F26CF4A5097F9BD"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.emf.mongo"/>
+      <attribute name="objectClass" value="org.gecko.emf.mongo.InputContentHandler" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.mongodb.client)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.resource)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.mongo)(version&gt;=5.0.0)(!(version&gt;=6.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.pushstream)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.pushstream"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.pushstream)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.pushstream"/>
+    </requirement>
+    <requirement namespace="org.gecko.osgi.emf.persistence">
+      <directive name="filter" value="(org.gecko.osgi.emf.persistence=mongo)"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.felix.metatype"/>
+      <attribute name="documentation" value="http://felix.apache.org/site/apache-felix-metatype-service.html"/>
+      <attribute name="description" value="Implementation of the OSGi Metatype Service Specification 1.4"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.2" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.service.metatype"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.metatype"/>
+      <attribute name="bundle-version" value="1.2.2" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.felix.metatype"/>
+      <attribute name="version" value="1.2.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1451724338,2083,-421553553,2017053308,497941041,-629368844,-767205293,-386313361,-1326642926,78064,-1179724553,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.metatype"/>
+      <attribute name="bundle-version" value="1.2.2" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.metatype"/>
+      <attribute name="version" value="1.4.0" type="Version"/>
+      <attribute name="bnd.hashes" value="321319151,-402152275,320335376,640868022,1821631372,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.2" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.felix.metatype"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.2" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.felix.metatype"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.felix:org.apache.felix.metatype"/>
+      <attribute name="from" value="org.apache.felix:org.apache.felix.metatype:1.2.2"/>
+      <attribute name="version" value="1.2.2" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.apache.felix.metatype"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="1.2.2"/>
+      <attribute name="maven-groupId" value="org.apache.felix"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="76699" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/apache/felix/org.apache.felix.metatype/1.2.2/org.apache.felix.metatype-1.2.2.jar"/>
+      <attribute name="osgi.content" value="AF6C09A73890ACD36F7B192F7AE372C18DB9885E77BB402E889101E2B19E7A2D"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.osgi.service.metatype"/>
+      <attribute name="osgi.extender" value="osgi.metatype"/>
+      <attribute name="version" value="1.4.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.implementation">
+      <directive name="uses" value="org.osgi.service.metatype"/>
+      <attribute name="osgi.implementation" value="osgi.metatype"/>
+      <attribute name="version" value="1.4.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.osgi.service.metatype"/>
+      <attribute name="objectClass" value="org.osgi.service.metatype.MetaTypeService" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.log"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.metatype)(version&gt;=1.4.0)(!(version&gt;=1.5.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.metatype"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.7))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.felix.configadmin"/>
+      <attribute name="documentation" value="http://felix.apache.org/site/apache-felix-config-admin.html"/>
+      <attribute name="description" value="Implementation of the OSGi Configuration Admin Service Specification 1.6"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.9.18" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.configadmin"/>
+      <attribute name="bundle-version" value="1.9.18" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.felix.cm"/>
+      <attribute name="version" value="1.2.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1075294946,-208945106,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.felix.cm,org.osgi.framework"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.configadmin"/>
+      <attribute name="bundle-version" value="1.9.18" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.felix.cm.file"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1871950444,-1580107855,-1017611574,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.configadmin"/>
+      <attribute name="bundle-version" value="1.9.18" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.cm"/>
+      <attribute name="version" value="1.6.0" type="Version"/>
+      <attribute name="bnd.hashes" value="595867238,-1563253546,-1675361255,160505113,-1671138460,2064407577,-851798102,368751429,2132978627,40470441,1045830198,-14948876,1655325979,-1419216863,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.9.18" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.felix.configadmin"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.9.18" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.felix.configadmin"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.felix:org.apache.felix.configadmin"/>
+      <attribute name="from" value="org.apache.felix:org.apache.felix.configadmin:1.9.18"/>
+      <attribute name="version" value="1.9.18" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.apache.felix.configadmin"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="1.9.18"/>
+      <attribute name="maven-groupId" value="org.apache.felix"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="168093" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/apache/felix/org.apache.felix.configadmin/1.9.18/org.apache.felix.configadmin-1.9.18.jar"/>
+      <attribute name="osgi.content" value="C2DDF2D49E91328C9EEC7C73688A64D2C08077D9DD0F9FD5A5407B59B0A480D5"/>
+    </capability>
+    <capability namespace="osgi.implementation">
+      <directive name="uses" value="org.osgi.service.cm,org.apache.felix.cm"/>
+      <attribute name="osgi.implementation" value="osgi.cm"/>
+      <attribute name="version" value="1.6.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.osgi.service.cm,org.apache.felix.cm"/>
+      <attribute name="objectClass" value="org.osgi.service.cm.ConfigurationAdmin" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.osgi.service.cm,org.apache.felix.cm"/>
+      <attribute name="objectClass" value="org.apache.felix.cm.PersistenceManager" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.cm)(version&gt;=1.6.0)(!(version&gt;=1.7.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.cm"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.coordinator)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.coordinator"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.log"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.cm)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.felix.cm"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.cm.file)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.felix.cm.file"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.7))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.osgi.service.log.LogService)"/>
+      <directive name="effective" value="active"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License v1.0"/>
+      <attribute name="copyright" value="Data In Motion Consulting"/>
+      <attribute name="osgi.identity" value="org.gecko.emf.collections"/>
+      <attribute name="documentation" value="https://gitlab.com/gecko.io/geckoEMFUtil"/>
+      <attribute name="description" value="EMF Collections extensions"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.0.16" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.collections"/>
+      <attribute name="bundle-version" value="2.0.16" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.collection"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-393458580,1425955268,-108638296,816560323,975618347,1086854103,-953250180,1651701700,1290768411,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl,org.eclipse.emf.ecore,org.eclipse.emf.ecore.util,org.gecko.collection"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.collections"/>
+      <attribute name="bundle-version" value="2.0.16" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.collection.util"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-697020135,1626908562,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.impl,org.gecko.collection"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.collections"/>
+      <attribute name="bundle-version" value="2.0.16" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.collection.impl"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-140833620,690557416,1499400683,-1266735465,2097957892,742842587,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.0.16" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.emf.collections"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.0.16" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.emf.collections"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.geckoprojects.emf:org.gecko.emf.collections"/>
+      <attribute name="from" value="org.geckoprojects.emf:org.gecko.emf.collections:2.0.16"/>
+      <attribute name="version" value="2.0.16" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.gecko.emf.collections"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="2.0.16"/>
+      <attribute name="maven-groupId" value="org.geckoprojects.emf"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="emf.configurator">
+      <attribute name="nsURI" value="http://gecko.org/emf/collection/1.0" type="List&lt;String&gt;"/>
+      <attribute name="name" value="collection"/>
+      <attribute name="emf.configurator" value="epackage"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="60924" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/geckoprojects/emf/org.gecko.emf.collections/2.0.16/org.gecko.emf.collections-2.0.16.jar"/>
+      <attribute name="osgi.content" value="5A5406C40886405FBB1179CA3EE3E457FFFD1FDEDC4298BA3BE7C97E57E24CCC"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.emf.osgi"/>
+      <attribute name="objectClass" value="org.gecko.emf.osgi.EPackageConfigurator" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.notify)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.notify.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.plugin)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.plugin"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.resource)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.collection)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.collection"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.osgi)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.osgi"/>
+    </requirement>
+    <requirement namespace="emf.core">
+      <directive name="filter" value="(&amp;(emf.core=osgi)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License v1.0"/>
+      <attribute name="copyright" value="Data In Motion Consulting"/>
+      <attribute name="osgi.identity" value="org.gecko.emf.pushstreams"/>
+      <attribute name="documentation" value="https://gitlab.com/gecko.io/geckoEMFUtil"/>
+      <attribute name="description" value="EMF PushStream extensions"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.0.15" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.ecore,org.osgi.util.pushstream"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.pushstreams"/>
+      <attribute name="bundle-version" value="1.0.15" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.pushstream"/>
+      <attribute name="version" value="1.0.15.SNAPSHOT" type="Version"/>
+      <attribute name="bnd.hashes" value="363008188,-2090707856,1999086672,1425955268,-2011060340,-576059203" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.impl,org.gecko.emf.pushstream,org.osgi.util.pushstream"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.pushstreams"/>
+      <attribute name="bundle-version" value="1.0.15" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.pushstream.impl"/>
+      <attribute name="version" value="1.0.15.SNAPSHOT" type="Version"/>
+      <attribute name="bnd.hashes" value="2014783740,-1757425008,-926033972,1945122941" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl,org.eclipse.emf.ecore,org.eclipse.emf.ecore.util,org.gecko.emf.pushstream"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.pushstreams"/>
+      <attribute name="bundle-version" value="1.0.15" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.pushstream.util"/>
+      <attribute name="version" value="1.0.15.SNAPSHOT" type="Version"/>
+      <attribute name="bnd.hashes" value="-1102769995,-1621048530" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.0.15" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.emf.pushstreams"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.0.15" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.emf.pushstreams"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.geckoprojects.emf:org.gecko.emf.pushstreams"/>
+      <attribute name="from" value="org.geckoprojects.emf:org.gecko.emf.pushstreams:1.0.15"/>
+      <attribute name="version" value="1.0.15" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.gecko.emf.pushstreams"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="1.0.15"/>
+      <attribute name="maven-groupId" value="org.geckoprojects.emf"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="46168" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/geckoprojects/emf/org.gecko.emf.pushstreams/1.0.15/org.gecko.emf.pushstreams-1.0.15.jar"/>
+      <attribute name="osgi.content" value="1FC03CD4FC873391669DF854A090B8EC97C797DADF7A479982618AE33F2BDB22"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.notify)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.notify.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.plugin)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.plugin"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.resource)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.gecko.emf.pushstream)"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.pushstream"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.gecko.emf.pushstream.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.pushstream.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.pushstream)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.pushstream"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <directive name="singleton" value="true"/>
+      <attribute name="osgi.identity" value="org.eclipse.emf.ecore.xmi"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.16.0.v20190528-0725" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore.xmi"/>
+      <attribute name="bundle-version" value="2.16.0.v20190528-0725" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xmi"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-55208408,1876868040,-628546704,-451365672,108489111,-567826326,853300948,1904900601,975485210,402638037,-426914117,-2086606091,681342930,-627840953,-541177822,-1519509088,1493255052,1798912645,-1227048579,-2123581785,-1095235534,-1552807730,-1878281462,1307555929,330749756,-972564386,-1227138747,-1702149659,-1668573915,-2004153313,-1226852844" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore.xmi"/>
+      <attribute name="bundle-version" value="2.16.0.v20190528-0725" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xmi.impl"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1469879662,-1673613236,-1905586583,202008135,-2137064498,1357883851,-1834061619,987936197,2072803933,-1317930643,387466368,1364692700,-1123204776,380094478,1460517468,-1091816890,952729382,1646471758,1400744889,-463685095,-791133465,-1380395290,1357473129,885099520,1818563229,1816284,-1423908703,-1429274174,-856987053,1596941606,1403735966,-1114767178,-1596772862,1645165626,-509556536,-916701854,2021922129,87028,-243714392,620620904,1493255052,-718974768,-1132328932,-861674557,-181303469,2069715476,1602307653,-1149893371,-1130813641,517769533,-37708379,-109715097,374830450,-1736029211,-1796910875,2084662433,2010654993,-2013227622,-167986465,894526036,2127858408" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore.xmi"/>
+      <attribute name="bundle-version" value="2.16.0.v20190528-0725" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xmi.util"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1064480312,702127707" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <directive name="singleton" value="true"/>
+      <attribute name="bundle-version" value="2.16.0.v20190528-0725" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.eclipse.emf.ecore.xmi"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <directive name="singleton" value="true"/>
+      <attribute name="bundle-version" value="2.16.0.v20190528-0725" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.eclipse.emf.ecore.xmi"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.eclipse.emf:org.eclipse.emf.ecore.xmi"/>
+      <attribute name="from" value="org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.16.0"/>
+      <attribute name="version" value="2.16.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.eclipse.emf.ecore.xmi"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="2.16.0"/>
+      <attribute name="maven-groupId" value="org.eclipse.emf"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="235196" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore.xmi/2.16.0/org.eclipse.emf.ecore.xmi-2.16.0.jar"/>
+      <attribute name="osgi.content" value="D8DA1146CD83675F5D5417FDD91FC89F2AF4B43E4A30110661326994DC71176D"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.namespace)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.namespace"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.parsers)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.parsers"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.w3c.dom)"/>
+      <attribute name="osgi.wiring.package" value="org.w3c.dom"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax)"/>
+      <attribute name="osgi.wiring.package" value="org.xml.sax"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax.ext)"/>
+      <attribute name="osgi.wiring.package" value="org.xml.sax.ext"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax.helpers)"/>
+      <attribute name="osgi.wiring.package" value="org.xml.sax.helpers"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.bundle">
+      <directive name="filter" value="(&amp;(osgi.wiring.bundle=org.eclipse.core.runtime)(bundle-version&gt;=3.6.0)(!(bundle-version&gt;=4.0.0)))"/>
+      <directive name="x-installation" value="greedy"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.bundle">
+      <directive name="filter" value="(&amp;(osgi.wiring.bundle=org.eclipse.emf.ecore)(bundle-version&gt;=2.18.0)(!(bundle-version&gt;=3.0.0)))"/>
+      <directive name="visibility" value="reexport"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Apache-2.0; link=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;; description=&quot;Apache License, Version 2.0&quot;"/>
+      <attribute name="copyright" value="Copyright (c) OSGi Alliance (2000, 2018). All Rights Reserved."/>
+      <attribute name="osgi.identity" value="org.osgi.util.promise"/>
+      <attribute name="documentation" value="https://www.osgi.org/"/>
+      <attribute name="description" value="OSGi Companion Code for org.osgi.util.promise Version 1.1.0"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.1.0.201802012106" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.util.function"/>
+      <attribute name="bundle-symbolic-name" value="org.osgi.util.promise"/>
+      <attribute name="bundle-version" value="1.1.0.201802012106" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.promise"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+      <attribute name="bnd.hashes" value="712535039,65070753,-973241247,65915235,1335848159,-891069155,2104342424,885810947,77116,-1547713212,-2009290710,-674203470,-1807668168,2605629,-1892220507,350741825,1437638748,393463102,1872034202,578079082,1355436283,65921,1229938816,-122541857,695804588,1910929295,-2041294197,1473077508,-1850559427,1360409019,-931148072,-374893917,-202516509,126968846,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.1.0.201802012106" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.osgi.util.promise"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.1.0.201802012106" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.osgi.util.promise"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.osgi:org.osgi.util.promise"/>
+      <attribute name="from" value="org.osgi:org.osgi.util.promise:1.1.0"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.osgi.util.promise"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="1.1.0"/>
+      <attribute name="maven-groupId" value="org.osgi"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="75427" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/osgi/org.osgi.util.promise/1.1.0/org.osgi.util.promise-1.1.0.jar"/>
+      <attribute name="osgi.content" value="A679E25688E84E1739831E8716A2CC7ACBF8348E22F1136D1988E34472E43756"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.function)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.function"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.7))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.felix.log"/>
+      <attribute name="documentation" value="https://www.apache.org/"/>
+      <attribute name="description" value="A simple implementation of the OSGi R7 Log service."/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.4" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.log"/>
+      <attribute name="bundle-version" value="1.2.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.log"/>
+      <attribute name="version" value="1.4.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1534135002,2054177710,2060375744,459075576,-1361742930,1955537649,-2013470288,-1030022714,971415866,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.service.log"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.log"/>
+      <attribute name="bundle-version" value="1.2.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.log.admin"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="939507583,-1280137761,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.4" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.felix.log"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.4" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.felix.log"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.felix:org.apache.felix.log"/>
+      <attribute name="from" value="org.apache.felix:org.apache.felix.log:1.2.4"/>
+      <attribute name="version" value="1.2.4" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.apache.felix.log"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="1.2.4"/>
+      <attribute name="maven-groupId" value="org.apache.felix"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="53175" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/apache/felix/org.apache.felix.log/1.2.4/org.apache.felix.log-1.2.4.jar"/>
+      <attribute name="osgi.content" value="00C61AAE47C2F5495FADCC5BFDEA66CAD5296F5BF22353B8753806DE09EDD9DD"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.osgi.service.log,org.osgi.service.log.admin"/>
+      <attribute name="objectClass" value="org.osgi.service.log.LogReaderService" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.osgi.service.log,org.osgi.service.log.admin"/>
+      <attribute name="objectClass" value="org.osgi.service.log.LogService,org.osgi.service.log.LoggerFactory" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.osgi.service.log,org.osgi.service.log.admin"/>
+      <attribute name="objectClass" value="org.osgi.service.log.admin.LoggerAdmin" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.4.0)(!(version&gt;=1.5.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.log"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log.admin)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.log.admin"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.7))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.osgi.service.cm.ConfigurationAdmin)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <directive name="singleton" value="true"/>
+      <attribute name="osgi.identity" value="org.eclipse.emf.ecore"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.23.0.v20200630-0516" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1002829140,1245097871,2283072,-625568675,-662506402,1342523351,2040601651,-2018565050,572770538,1930022107,635054813,1693408617,65887974,-1739330839,567599365,-1210743764,-407658376,577704552,-831289372,-1029904811,-1302826334,852419649,-1011068700,404282502,1143695582,-1273579563,-644372944,1320976788,934628682,585500695,-2002788446,550814952,-1670660802,219654285,-1214338298,1425955268,-929518014,2055629724,-568731033" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.impl"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1605996764,490765269,731190116,1339585366,-1654880371,-590105435,549575333,849129673,1384513940,-1174250857,1367594789,708742705,1800447117,-897872424,-625433980,1319411955,393897862,2044942121,2128237094,625288361,729181796,2061872325,201483372,-1415480648,1450341544,-342488048,-670577628,366815202,1880240551,-423083138,-1401703935,1633154211,-506254100,262751980,1768652510,-104590044,1875771334,-1832871474,1169790873,-2084453552,-840372121,2135769416,1257225026,67115090,-1273883684,-1641986296,914783768,802778014,-1350386444,1994647141,-1551309353,-275487296,-426410335,2041207304,-972322655,-1618220662,-1322508459,797430936,2131637103,-576529968,-563978563,-1342887388,-556454034,1960853467,921988179,-1948863338,-333734084,1635760077,-565972319,-1929484792,-615517723,-390871542,1917287525,832581770,-1636107383,1969682118,-2116622933,-2068569034,1545439407,-2020501435,-1702825638,-1294176812,-2127840820,-1803841479,-1770230134,-1308034345,932458794,583568966,1414960002,-1883484437,-1461551517,-505546721,1593011297,-1622746109,1277604775,-1912486821" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.plugin"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1611138194,-787580157,-1277160847,145609560,1784676478,-1242652433,983470695,1855817177,-1953864909,-2086606091,681342930,-1344303137,-1820408393,1525523486,-26841130,137151255,-1077425596,456136629,-1974004681,528211276,-1928108355,480104020,-505546721,1355413136,-1889480908,-1945021045,1573216128,838543556,1871722037,-593361438,-2076346547,595990590" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1500594931,-625568675,-1356620974,46087345,445560775,1245097871,572770538,-452070768,635054813,-276420562,-1392573100,2018562603,1910627168,-802514928,2000715872,-1743947334,-2007583625,598017433,-241529830,1254626740,-972564386" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource.impl"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1248119002,916551842,-1825307456,1290626954,2016261304,1002274055,572770538,-1356076810,-1772292859,1319251581,-1401864309,-1954240823,-1294337186,795636645,420147311,545777674,-1790567066,65074408,1092154853,-5765617,-791133465,-492678543,887795534,-1781886324,367909981,-512080912,-492592913,-927033858,1403821596,635054813,-1783508880,-1198165233,-967460806,490029124,246037570,645772845,-945136737,-863983300,-262730983,-521806091,1344221065,-1727376580,-220383378,1272542242,-1512561855,2001232341,-23634808,-170616930,1622610324,-658443788,1403735966,-706303836,-828969296,-1413166337" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.util"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-228663163,-861171010,1702492886,-908704404,41448123,-2127840820,1158583310,-1184891663,-1520632311,-1823496247,-1685875364,1524915612,1116128214,1034294717,496608702,84531014,-221764899,245026100,659107429,1631794296,252519139,-81209974,-134449657,-1287021818,-1913398056,1416288649,1776561347,89971879,167297629,-1361489735,496603415,236067113,-1312530793,-1009164827,1600954821,-1393376169,592017750,-286729048,474202017,-505546721,1584505271,-1300176858,333724225,168110408,-204720913,1404986921,-2042759889,-855364549,-1096232466,691292516,2039205284,-516393694,440778994,-1421692037,820414308,392663479,-888259937,-932014605,-1035987270,538486825,12710793,-1455383147,2027424519,682246431,-1394852482,-605487520,-932797880,1145652174,-8520783,-1344426691,727552800,2064724287,1517339871,-1895643959,2008363935,14176848,-739531924,-1762486453,78381969,-627950021,-1724707400,1417263178,1798141331,-2137209563,2024104690,-1528265017,-2057824556,-1979967128,-1852535940,664635912,605008503,1177421497,2616251,-1048493590,-547739866,-627435642,626932175,291007420,1469511246,162839496,2025484200,-708722831,-1447621637,635054813,67115090,-1034806157,1591091997,1842750118,1987583435,64864098,-819923228,1524266386,63955982,1348320621,-940294150,212869628,1364649019,894184242,2067841992,-1694527034,-1897221555,1245097871,2283072,-625568675,572770538,-878886323,-1805606060,-636261586" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xml.namespace"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1050091840,-1209850399,1840681286,1425955268,2125501570" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xml.namespace.impl"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="609100705,-1576840058,-745449022" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xml.namespace.util"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-414298994" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xml.type"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="821772070,-214769767,2053479259,2072662292,-567843058,-133199879,1425955268,151620405" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xml.type.impl"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1250028954,1296387099,490110292,520357454,729181796,-724846151,106544885" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xml.type.internal"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1982630255,-576306455,-2136751092,-1605808872,1392322430,84300,1702492886,-1227323411,213169511,1631718343,77225596,-1401904955,-1039434757,618478585,74115493,2017201143,-1884045315,-1418968004,-1104376008,-1652326434,1859653106,1377992944,2561,1971845884,295975854,-1881006891,168078044,543818100,261500710,-1567726604,1039597320,954607380,-1678783089,-975117719,256246050,433453876,-738460637,338477214,-1691269339,-1402986050,1092697468,-1011473086,1720034095,147223624,495073418,80988633,78838855,729181796,-1505833899,975445675" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.ecore"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xml.type.util"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1617437635,-1006751861,-729903744,71970809,-1331194509,928804605,-1937510614,-288151579,520718783,2000715872,-497825985,1889932514,-2003789965,1061446273" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <directive name="singleton" value="true"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.eclipse.emf.ecore"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <directive name="singleton" value="true"/>
+      <attribute name="bundle-version" value="2.23.0.v20200630-0516" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.eclipse.emf.ecore"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.eclipse.emf:org.eclipse.emf.ecore"/>
+      <attribute name="from" value="org.eclipse.emf:org.eclipse.emf.ecore:2.23.0"/>
+      <attribute name="version" value="2.23.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.eclipse.emf.ecore"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="2.23.0"/>
+      <attribute name="maven-groupId" value="org.eclipse.emf"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="1414761" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/eclipse/emf/org.eclipse.emf.ecore/2.23.0/org.eclipse.emf.ecore-2.23.0.jar"/>
+      <attribute name="osgi.content" value="0BCB664F65410A937AC463EB9B5CBC65AADB32EFBD92528962EEE08864827AD4"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.crypto)"/>
+      <attribute name="osgi.wiring.package" value="javax.crypto"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.crypto.spec)"/>
+      <attribute name="osgi.wiring.package" value="javax.crypto.spec"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.datatype)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.datatype"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.namespace)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.namespace"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.parsers)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.parsers"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax)"/>
+      <attribute name="osgi.wiring.package" value="org.xml.sax"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax.helpers)"/>
+      <attribute name="osgi.wiring.package" value="org.xml.sax.helpers"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.bundle">
+      <directive name="filter" value="(&amp;(osgi.wiring.bundle=org.eclipse.core.runtime)(bundle-version&gt;=3.6.0)(!(bundle-version&gt;=4.0.0)))"/>
+      <directive name="x-installation" value="greedy"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.bundle">
+      <directive name="filter" value="(&amp;(osgi.wiring.bundle=org.eclipse.emf.common)(bundle-version&gt;=2.20.0)(!(bundle-version&gt;=3.0.0)))"/>
+      <directive name="visibility" value="reexport"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.bundle">
+      <directive name="filter" value="(&amp;(osgi.wiring.bundle=org.eclipse.core.resources)(bundle-version&gt;=3.6.0)(!(bundle-version&gt;=4.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License v1.0"/>
+      <attribute name="copyright" value="Data In Motion consulting GmbH"/>
+      <attribute name="osgi.identity" value="org.gecko.mongo.osgi.component"/>
+      <attribute name="documentation" value="https://gitlab.com/gecko.io/geckoMongoEMF"/>
+      <attribute name="description" value="Mongo OSGi service components for the MongoClient"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="6.0.5" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb,com.mongodb.client,org.bson.codecs.configuration,org.gecko.mongo.osgi.exceptions"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.mongo.osgi.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.mongo.osgi"/>
+      <attribute name="version" value="2.2.0" type="Version"/>
+      <attribute name="bnd.hashes" value="172645584,564797712,-1184293504,2052289787,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.gecko.mongo.osgi.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.mongo.osgi.exceptions"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-494111251,-2097262411,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.gecko.mongo.osgi.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.mongo.osgi.configuration"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-39683415,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.mongo.osgi.component"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.mongo.osgi.component"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.geckoprojects.mongo:org.gecko.mongo.osgi.component"/>
+      <attribute name="from" value="org.geckoprojects.mongo:org.gecko.mongo.osgi.component:6.0.5"/>
+      <attribute name="version" value="6.0.5" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.gecko.mongo.osgi.component"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="6.0.5"/>
+      <attribute name="maven-groupId" value="org.geckoprojects.mongo"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="org.gecko.osgi.persistence">
+      <attribute name="org.gecko.osgi.persistence" value="mongo"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="66569" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/geckoprojects/mongo/org.gecko.mongo.osgi.component/6.0.5/org.gecko.mongo.osgi.component-6.0.5.jar"/>
+      <attribute name="osgi.content" value="48AF4E9DC70C8B0F7C2B87048AD8E7E84DE483F34A48CAB47DA4AE040CBE32E4"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.mongo.osgi"/>
+      <attribute name="objectClass" value="org.gecko.mongo.osgi.MongoClientProvider" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.mongo.osgi"/>
+      <attribute name="objectClass" value="org.gecko.mongo.osgi.MongoDatabaseProvider" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.mongo.osgi"/>
+      <attribute name="objectClass" value="org.gecko.mongo.osgi.MongoIdFactory" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.osgi.service.metatype"/>
+      <attribute name="objectClass" value="org.osgi.service.metatype.MetaTypeProvider" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.identity">
+      <directive name="filter" value="(osgi.identity=org.mongodb.mongo-java-driver)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.mongodb)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.mongodb.client)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.io)"/>
+      <attribute name="osgi.wiring.package" value="java.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.net)"/>
+      <attribute name="osgi.wiring.package" value="java.net"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
+      <attribute name="osgi.wiring.package" value="java.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.concurrent)"/>
+      <attribute name="osgi.wiring.package" value="java.util.concurrent"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.concurrent.atomic)"/>
+      <attribute name="osgi.wiring.package" value="java.util.concurrent.atomic"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.bson.codecs.configuration)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.bson.codecs.configuration"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.bson.types)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.bson.types"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.mongo.osgi)(version&gt;=2.2.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.mongo.osgi"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.mongo.osgi.exceptions)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.mongo.osgi.exceptions"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.log"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.metatype)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.metatype"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.mongo.osgi.MongoClientProvider)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.mongo.osgi.MongoClientProvider)"/>
+      <directive name="effective" value="active"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <directive name="singleton" value="true"/>
+      <attribute name="osgi.identity" value="org.eclipse.emf.common"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.20.0.v20200822-0801" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.common"/>
+      <attribute name="bundle-version" value="2.20.0.v20200822-0801" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-176063923,-2086606091,681342930,-1344303137,-1155026253,189562142,993523770,1193876605,-881668885,225925131,986511729" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.common"/>
+      <attribute name="bundle-version" value="2.20.0.v20200822-0801" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.archive"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1623108651,-1937510614" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.common"/>
+      <attribute name="bundle-version" value="2.20.0.v20200822-0801" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.command"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="2026711879,-2053905039,307242141,-889113431,23851,-1679919317,2109480477,647354865,-815640856,2031042304,-800453491,561685751,-1380578808" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.common"/>
+      <attribute name="bundle-version" value="2.20.0.v20200822-0801" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="635054813,514145071,663579355,759553291,-1954383754,-405369592,1650007494,1280868375" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.common"/>
+      <attribute name="bundle-version" value="2.20.0.v20200822-0801" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify.impl"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="2063162267,-2042043921,-1725185272,1410803924,1490944005,-902201081,-1278222316,-1845751307,-1675091018,768423371,831234310,1837069015,-1805010652" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.eclipse.emf.common"/>
+      <attribute name="bundle-version" value="2.20.0.v20200822-0801" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1682000871,1086871507,-634276847,-1613623337,-1378366955,-1224704127,367136765,2075336102,1333770126,1899559752,52520652,757766325,480839713,-1152163243,-1895643959,-1300176858,844295989,369782643,-2017084728,-1627836134,1257339098,67115090,1524266386,2666181,304330725,-249489881,-911832798,-608478583,-1499617306,-1101681099,-863935124,-1370404053,-1744489447,78391537,1640765887,-1066995918,-210192618,-140630688,-1420685287,684600453,-1357138678,1132384793,420272109,-1116963667,1409046177,-112383194,445560775,-327093446,434636872,-1402605529,-1029526887,-587399167,-1202509306,-1427413804,-456433648,66091651,-1530974076,2132695,1072804836,315784914,-2013470288,-1393994438,851479848,-1117180103,1167962567,203706774,2493500,-2137064498,-1545048419,-23634808,1895597947,-655195698,-1120499480,637949796,-1963960545,-1989524944,-681899365,1051255538,17301329,1059824868,-1588674918,274473858,-1256894476,-26102196,-1585625488,1021957033,-1743574466,-1926827967,-967859260,324795899,-1360688086,-1136052831,545902472,84300,-277393102,-984787219,383528572,-217516694" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <directive name="singleton" value="true"/>
+      <attribute name="bundle-version" value="2.20.0.v20200822-0801" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.eclipse.emf.common"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <directive name="singleton" value="true"/>
+      <attribute name="bundle-version" value="2.20.0.v20200822-0801" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.eclipse.emf.common"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.eclipse.emf:org.eclipse.emf.common"/>
+      <attribute name="from" value="org.eclipse.emf:org.eclipse.emf.common:2.20.0"/>
+      <attribute name="version" value="2.20.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.eclipse.emf.common"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="2.20.0"/>
+      <attribute name="maven-groupId" value="org.eclipse.emf"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="375606" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/eclipse/emf/org.eclipse.emf.common/2.20.0/org.eclipse.emf.common-2.20.0.jar"/>
+      <attribute name="osgi.content" value="CEAF760717C388C6F3D3AA65CACECDED3F2DA25718B8B3390D064E1554BFB242"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.bundle">
+      <directive name="filter" value="(&amp;(osgi.wiring.bundle=org.eclipse.core.runtime)(bundle-version&gt;=3.6.0)(!(bundle-version&gt;=4.0.0)))"/>
+      <directive name="x-installation" value="greedy"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.felix.scr"/>
+      <attribute name="documentation" value="http://felix.apache.org/site/apache-felix-service-component-runtime.html"/>
+      <attribute name="description" value="Implementation of the Declarative Services specification 1.4"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.1.24" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.service.component"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.scr"/>
+      <attribute name="bundle-version" value="2.1.24" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.felix.scr.component"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1191330285,-1511829527" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.scr"/>
+      <attribute name="bundle-version" value="2.1.24" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.felix.scr.info"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-704754736" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.scr"/>
+      <attribute name="bundle-version" value="2.1.24" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.component"/>
+      <attribute name="version" value="1.4.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1162845426,-1732850158,-1228219406,518703469,-1056307054,1970033372,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.service.component.runtime.dto,org.osgi.util.promise"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.scr"/>
+      <attribute name="bundle-version" value="2.1.24" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.component.runtime"/>
+      <attribute name="version" value="1.4.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1884290256,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.dto,org.osgi.framework.dto"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.scr"/>
+      <attribute name="bundle-version" value="2.1.24" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.component.runtime.dto"/>
+      <attribute name="version" value="1.4.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1401622534,1820653184,-338241868,-706379834,-655211827,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.1.24" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.felix.scr"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.1.24" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.felix.scr"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.felix:org.apache.felix.scr"/>
+      <attribute name="from" value="org.apache.felix:org.apache.felix.scr:2.1.24"/>
+      <attribute name="version" value="2.1.24" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.apache.felix.scr"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="2.1.24"/>
+      <attribute name="maven-groupId" value="org.apache.felix"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="406917" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/apache/felix/org.apache.felix.scr/2.1.24/org.apache.felix.scr-2.1.24.jar"/>
+      <attribute name="osgi.content" value="F95BB833919F9A79146FD5CD5C28E60C708EE2762BA17019A9C84501A65B6B0F"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.osgi.service.component"/>
+      <attribute name="osgi.extender" value="osgi.component"/>
+      <attribute name="version" value="1.4.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.osgi.service.component.runtime"/>
+      <attribute name="objectClass" value="org.osgi.service.component.runtime.ServiceComponentRuntime" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.cm)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.cm"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.log"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.metatype)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.metatype"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.packageadmin)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.packageadmin"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.service.command)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.apache.felix.service.command"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.parsers)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.parsers"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.scr.component)(version&gt;=1.1.0)(!(version&gt;=1.2.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.felix.scr.component"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.scr.info)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.felix.scr.info"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.dto)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.dto"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.dto)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.dto"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.startlevel)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.startlevel"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.component)(version&gt;=1.4.0)(!(version&gt;=1.5.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.component"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.component.runtime)(version&gt;=1.4.0)(!(version&gt;=1.5.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.component.runtime"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.component.runtime.dto)(version&gt;=1.4.0)(!(version&gt;=1.5.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.component.runtime.dto"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.promise)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.promise"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax)"/>
+      <attribute name="osgi.wiring.package" value="org.xml.sax"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax.helpers)"/>
+      <attribute name="osgi.wiring.package" value="org.xml.sax.helpers"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(|(&amp;(osgi.ee=JavaSE)(version=1.7))(&amp;(osgi.ee=JavaSE/compact1)(version=1.8)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License v1.0"/>
+      <attribute name="copyright" value="Bryan Hunt, Data In Motion Consulting"/>
+      <attribute name="osgi.identity" value="org.gecko.emf.mongo.component"/>
+      <attribute name="documentation" value="https://gitlab.com/gecko.io/geckoMongoEMF"/>
+      <attribute name="description" value="EMF Mongo implementation"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="6.0.5" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.client,org.bson,org.eclipse.emf.ecore,org.eclipse.emf.ecore.impl"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.model"/>
+      <attribute name="version" value="2.1.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1319971867,-1830778279,-1066733119,1425955268,-781912835,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl,org.eclipse.emf.ecore,org.eclipse.emf.ecore.util,org.gecko.emf.mongo.model"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.model.util"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1467616732,-2135587939,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.client,org.bson,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.gecko.emf.mongo.model"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo"/>
+      <attribute name="version" value="5.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1611070187,946598619,-622062112,587793354,1903449149,415178366,-7450167,127242,1913639392,1328673615,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.annotations"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-93143153,1657765794,-720407018,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.eclipse.emf.ecore,org.gecko.emf.mongo"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.converter"/>
+      <attribute name="version" value="2.2.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1086101351,-942781873,2100180738,618696831,-1433464522,1357655827,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.client,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.xmi.impl"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.util"/>
+      <attribute name="version" value="2.2.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-347895454,-177881376,-1748708611,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.mongodb.client,org.bson,org.eclipse.emf.common.util,org.eclipse.emf.ecore.resource,org.eclipse.emf.ecore.resource.impl,org.gecko.emf.mongo,org.gecko.emf.osgi,org.gecko.mongo.osgi,org.osgi.service.component"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.handlers"/>
+      <attribute name="version" value="3.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1210616883,-793512107,1698018600,-872645262,879568963,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson,org.bson.codecs,org.bson.codecs.configuration,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.eclipse.emf.ecore.util,org.gecko.emf.mongo,org.gecko.emf.mongo.codecs.builder"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.codecs"/>
+      <attribute name="version" value="3.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="257793699,-1066853122,-2038434294,-874037984,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.bson,org.bson.codecs,org.bson.codecs.configuration,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.eclipse.emf.ecore.xmi,org.gecko.emf.mongo"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.emf.mongo.component"/>
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.codecs.builder"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-2029128834,-1611736386,1314854679,1281526231,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.emf.mongo.component"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="6.0.5" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.emf.mongo.component"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.geckoprojects.mongo:org.gecko.emf.mongo.component"/>
+      <attribute name="from" value="org.geckoprojects.mongo:org.gecko.emf.mongo.component:6.0.5"/>
+      <attribute name="version" value="6.0.5" type="Version"/>
+    </capability>
+    <capability namespace="bnd.maven">
+      <attribute name="maven-artifactId" value="org.gecko.emf.mongo.component"/>
+      <attribute name="maven-extension" value="jar"/>
+      <attribute name="maven-repository" value="GeckoMongoEMF Workspace Extension"/>
+      <attribute name="maven-version" value="6.0.5"/>
+      <attribute name="maven-groupId" value="org.geckoprojects.mongo"/>
+      <attribute name="maven-classifier" value=""/>
+    </capability>
+    <capability namespace="org.gecko.osgi.emf.persistence">
+      <attribute name="org.gecko.osgi.emf.persistence" value="mongo"/>
+    </capability>
+    <capability namespace="org.gecko.osgi.emf.persistence">
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="org.gecko.osgi.emf.persistence" value="mongo"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="189513" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="file:/home/ilenia/.m2/repository/org/geckoprojects/mongo/org.gecko.emf.mongo.component/6.0.5/org.gecko.emf.mongo.component-6.0.5.jar"/>
+      <attribute name="osgi.content" value="71BB28D00E308A499FC2C4185A059E9C8B4B776BEBE0EA51E9AE58BD68F44349"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.emf.mongo"/>
+      <attribute name="objectClass" value="org.gecko.emf.mongo.ConverterService" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.emf.mongo,org.gecko.emf.mongo"/>
+      <attribute name="objectClass" value="org.gecko.emf.mongo.InputStreamFactory,org.gecko.emf.mongo.OutputStreamFactory" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.gecko.emf.mongo"/>
+      <attribute name="objectClass" value="org.gecko.emf.mongo.QueryEngine" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.mongodb)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.mongodb.bulk)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.bulk"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.mongodb.client)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.mongodb.client.model)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.model"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.mongodb.client.result)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.client.result"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.datatype)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.datatype"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.bson)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.bson"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.bson.codecs)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.bson.codecs"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.bson.codecs.configuration)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.bson.codecs.configuration"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.bson.conversions)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.bson.conversions"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.bson.types)(version&gt;=3.9.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.bson.types"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.notify)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.notify.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.notify.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.common.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.common.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.plugin)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.plugin"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.resource)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.resource.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.resource.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.util)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.xmi)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xmi"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.emf.ecore.xmi.impl)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.emf.ecore.xmi.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.collection)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.collection"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.mongo)(version&gt;=5.0.0)(!(version&gt;=6.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.mongo.codecs)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.codecs"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.mongo.codecs.builder)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.codecs.builder"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.mongo.converter)(version&gt;=2.2.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.converter"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.mongo.handlers)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.handlers"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.mongo.model)(version&gt;=2.1.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.model"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.mongo.util)(version&gt;=2.2.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.mongo.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.emf.osgi)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.emf.osgi"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.gecko.mongo.osgi)(version&gt;=2.2.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.mongo.osgi"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.component"/>
+    </requirement>
+    <requirement namespace="org.gecko.osgi.emf.persistence">
+      <directive name="filter" value="(&amp;(org.gecko.osgi.emf.persistence=mongo)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.mongo.ConverterService)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.mongo.InputContentHandler)"/>
+      <directive name="effective" value="active"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.mongo.InputStreamFactory)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.mongo.OutputStreamFactory)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.mongo.QueryEngine)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.emf.mongo.ValueConverter)"/>
+      <directive name="effective" value="active"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.mongo.osgi.MongoDatabaseProvider)"/>
+      <directive name="effective" value="active"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.gecko.mongo.osgi.MongoIdFactory)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+</repository>

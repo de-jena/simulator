@@ -1,0 +1,4 @@
+-includeresource: transformations=transformations
+
+-library: enable-emf
+-buildpath: de.jena.publictransport.simulator.sensinact.mmt.util;version=latest

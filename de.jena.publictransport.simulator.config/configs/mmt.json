@@ -1,0 +1,22 @@
+{
+  ":configurator:resource-version": 1,
+	":configurator:symbolicname": "de.jena.ibis.simulator.config",
+	":configurator:version": "0.0.0",
+  
+  "ConfigurableModelTransformatorPool~ibis": {
+		"pool.componentName": "simulatorModelTransformatorService",
+		"pool.size": 100,
+		"pool.timeout": 100,
+		"poolRef.target": "(pool.group=sensinactPool)"
+	},
+	
+	"PrototypeConfigurableTransformationService~ibisSimulator": {
+		"name": "ibisSimulator",
+		"qvt.templatePath": "de.jena.publictransport.simulator.sensinact.mmt/transformations/ibisSimulatorToSensinact.qvto",
+		"qvt.transformatorName": "ibisSimulatorToSensinact",
+		"qvt.model.target": "(&(emf.model.name=ibis)(emf.model.name=publictransport))",
+		"pool.name": "ibisSimulatorPool",
+		"pool.group": "sensinactPool",
+		"pool.asService": false
+	}
+}

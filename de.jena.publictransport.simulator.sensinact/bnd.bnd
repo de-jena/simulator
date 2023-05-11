@@ -1,0 +1,23 @@
+-library: \
+	enable-emf
+
+Bundle-Version: 1.0.0.SNAPSHOT
+Private-Package: de.jena.publictransport.simulator.sensinact
+
+-buildpath: \
+	org.eclipse.sensinact.gateway.core.api,\
+	org.eclipse.sensinact.gateway.core.models.provider,\
+	de.jena.ibis.sensinact.model;version=latest,\
+	org.gecko.osgi.messaging,\
+	org.osgi.util.pushstream,\
+	org.osgi.util.promise,\
+	de.jena.upd.trafficos.publictransport.model,\
+	de.jena.upd.trafficos.common.model,\
+	org.eclipse.sensinact.gateway.core.geo-json,\
+	org.gecko.qvt.osgi.api,\
+	org.gecko.core.pool,\
+	org.osgi.service.typedevent,\
+	org.osgi.service.component,\
+	de.jena.upd.sensinact.generic.message.model,\
+	org.gecko.emf.json
+	

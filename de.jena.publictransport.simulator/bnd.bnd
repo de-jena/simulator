@@ -1,0 +1,13 @@
+-library: enable-emf
+
+-buildpath: \
+	de.jena.upd.trafficos.common.model;version=latest,\
+	de.jena.upd.trafficos.publictransport.model;version=latest,\
+	org.osgi.util.promise,\
+	org.gecko.osgi.messaging,\
+	de.dim.trafficos.apis
+
+Bundle-Version: 1.0.0.SNAPSHOT
+
+Private-Package: de.jena.publictransport.simulator
+-privatepackage: de.jena.publictransport.simulator.helper

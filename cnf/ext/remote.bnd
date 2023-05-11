@@ -1,0 +1,9 @@
+-include: \
+	https://gitlab.com/gecko.io/geckoMongoEMF/-/raw/master/cnf/geckoMongoEMF/geckoMongoEMF.bnd	
+		
+-plugin.coreruntime:\
+	aQute.bnd.repository.osgi.OSGiRepository;\
+		name=DIM_Eclipse_Runtime;\
+		locations=https://devel.data-in-motion.biz/public/update/repository/p2/obr/dim-core-runtime/index.xml;\
+		cache=${build}/cache/dim-core-runtime;\
+		poll.time=-1	

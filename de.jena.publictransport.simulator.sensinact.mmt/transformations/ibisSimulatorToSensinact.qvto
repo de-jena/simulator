@@ -1,0 +1,149 @@
+//Blackbox to convert dates
+import de.jena.publictransport.simulator.sensinact.mmt.util.DateToInstantBlackbox;
+import de.jena.publictransport.simulator.sensinact.mmt.util.LocationToSensinactGeoJsonBlackbox;
+
+modeltype XML "strict" uses type('http://www.eclipse.org/emf/2003/XMLType');
+modeltype ECORE "strict" uses ecore('http://www.eclipse.org/emf/2002/Ecore');
+modeltype SIMULATOR uses "http://datainmotion.de/trafficos/publictransport/1.0";
+modeltype SENSINACT uses "https://jena.de/models/ibis/sensinact/1.0";
+modeltype PROVIDER uses "https://eclipse.org/sensinact/core/provider/1.0";
+
+transformation ibisSimulatorToSensinact(in simulator : SIMULATOR, out sensinact : SENSINACT);
+
+main() {
+	simulator.rootObjects()[SIMULATOR::PublicTransportDataValue] -> map simulatorToService(); 	
+}
+
+
+mapping SIMULATOR::PublicTransportDataValue::simulatorToService(): SENSINACT::IbisDevice {
+	
+	var value : PublicTransportDataValueObject = self.value;
+	
+	result.id := self.lineRef.id + "-" + self.timeTableEntryRef.oclAsType(Integer).toString();
+	result.admin := self.map toAdmin(); 
+	
+	if(value.oclIsTypeOf(SIMULATOR::PublicTransportDoorChange)) {
+		result.doorStateData := value.oclAsType(SIMULATOR::PublicTransportDoorChange).map toDoorState();
+		result.doorStateData.timestamp := getInstant(self.timestamp);
+	} else if(value.oclIsTypeOf(SIMULATOR::PublicTransportDoorCount)) {
+		result.doorCountingStateData := value.oclAsType(SIMULATOR::PublicTransportDoorCount).map toDoorCount();
+		result.doorCountingStateData.timestamp := getInstant(self.timestamp);
+	} else if(value.oclIsTypeOf(SIMULATOR::PublicTransportStopRequested)) {
+		result.stopRequested := value.oclAsType(SIMULATOR::PublicTransportStopRequested).map toStopRequested();
+		result.stopRequested.timestamp := getInstant(self.timestamp);		
+	};
+	
+}
+
+mapping SIMULATOR::PublicTransportDataValue::toAdmin() : PROVIDER::Admin {
+	
+	friendlyName := self.type.toString();
+	location := self.toLocation();	
+}
+
+query SIMULATOR::PublicTransportDataValue::toLocation() : PROVIDER::EGeoJsonObject {
+	return switch {
+		case(self.value.oclIsTypeOf(SIMULATOR::PublicTransportPosition)) {			
+			return getGeoJson(self.value.oclAsType(SIMULATOR::PublicTransportPosition).position.latitude, self.value.oclAsType(PublicTransportPosition).position.longitude);
+		}
+	};
+	return getGeoJson(null, null);
+}
+
+mapping SIMULATOR::PublicTransportDoorChange::toDoorState() : SENSINACT::DoorState {
+	var eClass := SENSINACT::DoorState.oclAsType(ECORE::EClass);
+
+	serviceName := "DoorStateService";
+	serviceOperation := "SpecificDoorState";
+	
+	doorId := self.doorId;
+	if(self.doorId.oclIsUndefined().not()){
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorId"), "DoorStateService", null, "true", null);
+	};
+	
+	doorState := self.type.toString();
+	if(self.type.toString().oclIsUndefined().not()){
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorState"), "DoorStateService", null, "true", null);
+	};
+	
+	exitSide := self.doorSide.toString();
+	if(self.doorSide.toString().oclIsUndefined().not()){
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("exitSide"), "DoorStateService", null, "true", null);
+	};
+}
+
+mapping SIMULATOR::PublicTransportDoorCount::toDoorCount() : SENSINACT::PassengerCountingDoorCountingState {
+	var eClass := SENSINACT::PassengerCountingDoorCountingState.oclAsType(ECORE::EClass);
+
+	serviceName := "PassengerCountingService";
+	serviceOperation := "DoorCount";
+		
+	doorId := self.doorId;
+	if(self.doorId.oclIsUndefined().not()){
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorId"), "PassengerCountingService", null, "true", null);
+	};
+	
+	doorCountingType := self.type.toString();
+	if(self.type.toString().oclIsUndefined().not()){
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorCountingType"), "PassengerCountingService", null, "true", null);
+	};
+	
+	exitSide := self.doorSide.toString();
+	if(self.doorSide.toString().oclIsUndefined().not()){
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("exitSide"), "PassengerCountingService", null, "true", null);
+	};
+	
+	_in := self._in;
+	if(self._in.oclIsUndefined().not()){
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("in"), "PassengerCountingService", null, "true", null);
+	};
+	
+	_out := self._out;
+	if(self._out.oclIsUndefined().not()){
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("out"), "PassengerCountingService", null, "true", null);
+	};
+}
+
+mapping SIMULATOR::PublicTransportStopRequested::toStopRequested() : SENSINACT::StopRequested {
+	var eClass := SENSINACT::StopRequested.oclAsType(ECORE::EClass);
+
+	serviceName := "PassengerInfoService";
+	serviceOperation := "StopRequested";
+	stopRequested := self.stopRequested;
+	if(self.stopRequested.oclIsUndefined().not()){
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("stopRequested"), "PassengerInfoService", null, "true", null);
+	};
+}
+
+helper toMetadataEntry(feature : ECORE::EStructuralFeature, friendlyServiceName : String, unit : String, hide : String, type : String): PROVIDER::FeatureMetadata {
+	var entry := object PROVIDER::FeatureMetadata {
+		key := feature;
+		value := toMetadata(friendlyServiceName + "-" + feature.name, unit, hide, type); 
+	};
+	return entry;	
+}
+
+helper toMetadata(friendlyNameParam : String, unit : String, hide : String, type : String): PROVIDER::Metadata{
+	var res := object PROVIDER::Metadata {
+		extra += toCustomMetadata("friendlyName", friendlyNameParam);
+		if(unit != null and unit != ""){
+			extra += toCustomMetadata("unit", unit);
+			extra += toCustomMetadata("sensorthings.unit.name", unit);
+		};
+		if(hide.oclIsUndefined().not()){
+			extra += toCustomMetadata("sensorthings.hide", hide);
+		};
+		if(type.oclIsUndefined().not()){
+			extra += toCustomMetadata("sensorthings.datastream.type", type);
+		};
+	};	
+	return res;
+}
+
+helper toCustomMetadata(key : String, theValue : String): PROVIDER::FeatureCustomMetadata{
+	var entry := object PROVIDER::FeatureCustomMetadata{
+		name := key;
+		value := theValue;
+	};
+	return entry;
+}

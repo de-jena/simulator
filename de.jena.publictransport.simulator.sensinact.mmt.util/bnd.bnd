@@ -1,0 +1,9 @@
+-library: enable-emf
+
+-buildpath: \
+	org.eclipse.m2m.qvt.oml,\
+	org.gecko.qvt.osgi.api,\
+	de.jena.upd.trafficos.common.model;version=latest,\
+	org.eclipse.sensinact.gateway.core.geo-json
+
+Bundle-Version: 1.0.0.SNAPSHOT
