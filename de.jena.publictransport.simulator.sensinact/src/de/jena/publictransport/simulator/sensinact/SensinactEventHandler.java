@@ -67,7 +67,7 @@ public class SensinactEventHandler implements TypedEventHandler<ResourceDataNoti
 			update.setResource(event.resource);
 			setValue(update, event.oldValue, "oldValue");
 			setValue(update, event.newValue, "newValue");
-			send(String.format("5g/sensinact/event/data/%s/%s/%s/%s", event.model, event.provider, event.service, event.resource), update );
+			send(String.format("5g/sensinact/event/simulator/data/%s/%s/%s/%s", event.model, event.provider, event.service, event.resource), update );
 		} catch (Throwable e) {
 			logger.severe("Could not send update message: " + e.getMessage());
 			e.printStackTrace();
@@ -79,7 +79,6 @@ public class SensinactEventHandler implements TypedEventHandler<ResourceDataNoti
 	 * @param value
 	 */
 	private void setValue(UpdateMessage update, Object value, String name) {
-//		if(value == null) return;
 		if(update instanceof BooleanValueUpdate && value == null) return;
 		EStructuralFeature feature = update.eClass().getEStructuralFeature(name);
 		update.eSet(feature, value);
