@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <uriMap:MappingContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uriMap="http:///www.eclipse.org/m2m/qvt/oml/MModelUriMap/1.0.0">
   <mapping sourceURI="https://jena.de/models/ibis/sensinact/1.0" targetURI="platform:/resource/de.jena.ibis.sensinact.model/model/ibis.ecore"/>
-  <mapping sourceURI="http://datainmotion.de/trafficos/publictransport/1.0" targetURI="platform:/resource/de.dim.trafficos.publictransport.model/model/tos-publictransport.ecore"/>
+  <mapping sourceURI="http://jena.de/udp/trafficos/publictransport/1.0" targetURI="platform:/resource/de.jena.udp.trafficos.publictransport.model/model/tos-publictransport.ecore"/>
   <mapping sourceURI="https://eclipse.org/sensinact/core/provider/1.0" targetURI="platform:/resource/org.eclipse.sensinact.gateway.core.models.provider/model/sensinact.ecore"/>
 </uriMap:MappingContainer>

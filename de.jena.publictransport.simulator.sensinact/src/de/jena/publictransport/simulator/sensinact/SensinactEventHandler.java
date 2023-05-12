@@ -31,9 +31,9 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.typedevent.TypedEventHandler;
 import org.osgi.service.typedevent.propertytypes.EventTopics;
 
-import de.jena.upd.sensinact.generic.message.BooleanValueUpdate;
-import de.jena.upd.sensinact.generic.message.UpdateMessage;
-import de.jena.upd.sensinact.generic.message.util.SensinactGenericMessageUtil;
+import de.jena.udp.model.sensinact.generic.message.BooleanValueUpdate;
+import de.jena.udp.model.sensinact.generic.message.UpdateMessage;
+import de.jena.udp.model.sensinact.generic.message.util.SensinactGenericMessageUtil;
 
 /**
  * 

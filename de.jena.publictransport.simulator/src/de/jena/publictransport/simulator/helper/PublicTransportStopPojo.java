@@ -11,7 +11,7 @@
  */
 package de.jena.publictransport.simulator.helper;
 
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportDoorSideType;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportDoorSideType;
 
 /**
  * 

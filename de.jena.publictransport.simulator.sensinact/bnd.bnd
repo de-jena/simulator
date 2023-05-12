@@ -11,13 +11,13 @@ Private-Package: de.jena.publictransport.simulator.sensinact
 	org.gecko.osgi.messaging,\
 	org.osgi.util.pushstream,\
 	org.osgi.util.promise,\
-	de.jena.upd.trafficos.publictransport.model,\
-	de.jena.upd.trafficos.common.model,\
+	de.jena.udp.trafficos.publictransport.model,\
+	de.jena.udp.trafficos.common.model,\
 	org.eclipse.sensinact.gateway.core.geo-json,\
 	org.gecko.qvt.osgi.api,\
 	org.gecko.core.pool,\
 	org.osgi.service.typedevent,\
 	org.osgi.service.component,\
-	de.jena.upd.sensinact.generic.message.model,\
+	de.jena.udp.sensinact.generic.message.model,\
 	org.gecko.emf.json
 	

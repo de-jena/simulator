@@ -2,7 +2,7 @@
 
 ## How is it built?
 
-The simulator is based on a sample tram line 2 (Jena Ost - Winzerla). The tram line object is built accordingly to the `de.jena.upd.trafficos.publictransport.model` and is saved in the db, if it does not exist yet.
+The simulator is based on a sample tram line 2 (Jena Ost - Winzerla). The tram line object is built accordingly to the `de.jena.udp.trafficos.publictransport.model` and is saved in the db, if it does not exist yet.
 
 The simulated tram line timetable is built based on the following underlined schedule:
 

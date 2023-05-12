@@ -19,7 +19,7 @@ import org.eclipse.sensinact.gateway.geojson.Point;
 import org.gecko.qvt.osgi.api.ModelTransformationConstants;
 import org.osgi.service.component.annotations.Component;
 
-import de.dim.trafficos.common.model.common.TOSCommonPackage;
+import de.jena.udp.model.trafficos.common.TOSCommonPackage;
 
 /**
  * 

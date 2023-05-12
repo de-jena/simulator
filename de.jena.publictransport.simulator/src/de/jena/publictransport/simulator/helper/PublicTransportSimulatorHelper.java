@@ -15,17 +15,17 @@ import java.time.LocalTime;
 import java.util.List;
 import java.util.UUID;
 
-import de.dim.trafficos.common.model.common.Position;
-import de.dim.trafficos.common.model.common.ScheduleModeType;
-import de.dim.trafficos.common.model.common.TOSCommonFactory;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportDoorSideType;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportLine;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportStation;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportStop;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportTimeTable;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportTimeTableEntry;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportType;
-import de.jena.upd.trafficos.publictransport.model.publictransport.TOSPublicTransportFactory;
+import de.jena.udp.model.trafficos.common.Position;
+import de.jena.udp.model.trafficos.common.ScheduleModeType;
+import de.jena.udp.model.trafficos.common.TOSCommonFactory;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportDoorSideType;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportLine;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportStation;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportStop;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportTimeTable;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportTimeTableEntry;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportType;
+import de.jena.udp.model.trafficos.publictransport.TOSPublicTransportFactory;
 
 public class PublicTransportSimulatorHelper {	
 	

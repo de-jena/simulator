@@ -63,7 +63,6 @@
 	org.yaml.snakeyaml;version='[1.33.0,1.33.1)',\
 	de.jena.ibis.sensinact.model;version='[1.0.0,1.0.1)',\
 	de.jena.publictransport.simulator.sensinact;version=snapshot,\
-	de.jena.upd.sensinact.generic.message.model;version='[0.0.0,0.0.1)',\
 	org.apache.aries.component-dsl.component-dsl;version='[1.2.2,1.2.3)',\
 	org.apache.aries.typedevent.bus;version='[0.0.2,0.0.3)',\
 	org.eclipse.m2m.qvt.oml.ocl;version='[3.9.0,3.9.1)',\
@@ -81,11 +80,12 @@
 	slf4j.simple;version='[1.7.25,1.7.26)',\
 	org.eclipse.sensinact.gateway.core.impl;version='[0.0.2,0.0.3)',\
 	org.eclipse.sensinact.gateway.core.models.metadata;version='[0.0.2,0.0.3)',\
-	de.jena.upd.trafficos.common.model;version='[1.0.0,1.0.1)',\
-	de.jena.upd.trafficos.intersection.model;version='[1.0.0,1.0.1)',\
-	de.jena.upd.trafficos.intersectionsystem.model;version='[1.0.0,1.0.1)',\
-	de.jena.upd.trafficos.publictransport.model;version='[2.1.0,2.1.1)',\
-	de.jena.upd.trafficos.trafficlight.model;version='[1.0.0,1.0.1)'
+	de.jena.udp.sensinact.generic.message.model;version='[0.0.0,0.0.1)',\
+	de.jena.udp.trafficos.common.model;version='[1.0.0,1.0.1)',\
+	de.jena.udp.trafficos.intersection.model;version='[1.0.0,1.0.1)',\
+	de.jena.udp.trafficos.intersectionsystem.model;version='[1.0.0,1.0.1)',\
+	de.jena.udp.trafficos.publictransport.model;version='[2.1.0,2.1.1)',\
+	de.jena.udp.trafficos.trafficlight.model;version='[1.0.0,1.0.1)'
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\

@@ -45,22 +45,22 @@ import org.osgi.service.component.annotations.ReferenceScope;
 import org.osgi.util.promise.PromiseFactory;
 
 import de.dim.trafficos.apis.PublicTransportService;
-import de.dim.trafficos.common.model.common.IdNameElement;
-import de.dim.trafficos.common.model.common.TOSCommonFactory;
 import de.jena.publictransport.simulator.helper.PublicTransportSimulatorHelper;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportDataValue;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportDataValueObject;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportDataValueType;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportDoorChange;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportDoorChangeType;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportDoorCount;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportDoorCountingType;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportLine;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportPosition;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportStation;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportStopRequested;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportTimeTableEntry;
-import de.jena.upd.trafficos.publictransport.model.publictransport.TOSPublicTransportFactory;
+import de.jena.udp.model.trafficos.common.IdNameElement;
+import de.jena.udp.model.trafficos.common.TOSCommonFactory;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportDataValue;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportDataValueObject;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportDataValueType;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportDoorChange;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportDoorChangeType;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportDoorCount;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportDoorCountingType;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportLine;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportPosition;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportStation;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportStopRequested;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportTimeTableEntry;
+import de.jena.udp.model.trafficos.publictransport.TOSPublicTransportFactory;
 
 @Component(immediate=true, name="PublicTransportSimulator")
 public class PublicTransportSimulator {

@@ -36,7 +36,7 @@ import org.osgi.util.pushstream.PushStream;
 import de.jena.model.sensinact.ibis.IbisAdmin;
 import de.jena.model.sensinact.ibis.IbisDevice;
 import de.jena.model.sensinact.ibis.IbisSensinactFactory;
-import de.jena.upd.trafficos.publictransport.model.publictransport.PublicTransportDataValue;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportDataValue;
 
 @Component(immediate=true, name="PublicTransportSensinactPushComponent")
 public class SensinactPushComponent {

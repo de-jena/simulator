@@ -1,8 +1,8 @@
 -library: enable-emf
 
 -buildpath: \
-	de.jena.upd.trafficos.common.model;version=latest,\
-	de.jena.upd.trafficos.publictransport.model;version=latest,\
+	de.jena.udp.trafficos.common.model;version=latest,\
+	de.jena.udp.trafficos.publictransport.model;version=latest,\
 	org.osgi.util.promise,\
 	org.gecko.osgi.messaging,\
 	de.dim.trafficos.apis

@@ -4,7 +4,7 @@ import de.jena.publictransport.simulator.sensinact.mmt.util.LocationToSensinactG
 
 modeltype XML "strict" uses type('http://www.eclipse.org/emf/2003/XMLType');
 modeltype ECORE "strict" uses ecore('http://www.eclipse.org/emf/2002/Ecore');
-modeltype SIMULATOR uses "http://datainmotion.de/trafficos/publictransport/1.0";
+modeltype SIMULATOR uses "http://jena.de/udp/trafficos/publictransport/1.0";
 modeltype SENSINACT uses "https://jena.de/models/ibis/sensinact/1.0";
 modeltype PROVIDER uses "https://eclipse.org/sensinact/core/provider/1.0";
 
