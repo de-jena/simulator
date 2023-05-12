@@ -6,7 +6,7 @@ The simulator is based on a sample tram line 2 (Jena Ost - Winzerla). The tram l
 
 The simulated tram line timetable is built based on the following underlined schedule:
 
-![](/home/ilenia/Documents/Jena/Ibis/simulator/Tram2Timetable4Simulator.png)
+![](./Tram2Timetable4Simulator.png)
 
 We considered the four tram trips every hour, from 7am to 6pm, but enlarged the range till 8pm for the simulation.
 
@@ -33,7 +33,7 @@ SensiNact publishes the data to the `DATA/*` topic through the `EventAdmin`, so 
 
 An example of the published results is:
 
-![](/home/ilenia/Documents/Jena/Ibis/simulator/SampleSimulatorDataInSensinact.png)
+![](./SampleSimulatorDataInSensinact.png)
 
 The topic looks like `5g/sensinact/event/simulator/data/IbisDevice/<tramLineId>-<timeTableRef>/...`, where the `tramLineId` is the id with which the tram line is saved in the db. In our case we only have the tram line 2, so this id is always the same. The `timeTableRef` is again the reference to the trip of the day, so you can distinguish from which actual trip the update came from.
 
