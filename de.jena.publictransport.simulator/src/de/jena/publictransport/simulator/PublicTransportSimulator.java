@@ -61,6 +61,7 @@ import de.jena.udp.model.trafficos.publictransport.PublicTransportStation;
 import de.jena.udp.model.trafficos.publictransport.PublicTransportStopRequested;
 import de.jena.udp.model.trafficos.publictransport.PublicTransportTimeTableEntry;
 import de.jena.udp.model.trafficos.publictransport.TOSPublicTransportFactory;
+import org.gecko.emf.json.constants.EMFJs;
 
 @Component(immediate=true, name="PublicTransportSimulator")
 public class PublicTransportSimulator {
@@ -270,7 +271,7 @@ public class PublicTransportSimulator {
 		resource.getContents().add(dataValue);
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		Map<String, Object> saveOptions = new HashMap<String, Object>();
-		saveOptions.put("OPTION_SERIALIZE_DEFAULT_VALUE", Boolean.TRUE);
+		saveOptions.put(EMFJs.OPTION_SERIALIZE_DEFAULT_VALUE, Boolean.TRUE);
 		saveOptions.put("PROXY_ATTRIBUTES", Boolean.TRUE);
 		try {
 			resource.save(baos, saveOptions);
