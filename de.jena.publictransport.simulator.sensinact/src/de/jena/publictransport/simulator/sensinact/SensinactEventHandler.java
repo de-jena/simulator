@@ -31,7 +31,7 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.typedevent.TypedEventHandler;
 import org.osgi.service.typedevent.propertytypes.EventTopics;
 
-import de.jena.udp.model.sensinact.generic.message.BooleanValueUpdate;
+import de.jena.udp.model.sensinact.generic.message.ListValueUpdate;
 import de.jena.udp.model.sensinact.generic.message.UpdateMessage;
 import de.jena.udp.model.sensinact.generic.message.util.SensinactGenericMessageUtil;
 
@@ -79,7 +79,7 @@ public class SensinactEventHandler implements TypedEventHandler<ResourceDataNoti
 	 * @param value
 	 */
 	private void setValue(UpdateMessage update, Object value, String name) {
-		if(update instanceof BooleanValueUpdate && value == null) return;
+		if(update instanceof ListValueUpdate && value == null) value = Collections.EMPTY_LIST;
 		EStructuralFeature feature = update.eClass().getEStructuralFeature(name);
 		update.eSet(feature, value);
 	}
