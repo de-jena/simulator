@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="GeckoMongoEMF Workspace Extension" increment="1683878434287">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="GeckoMongoEMF Workspace Extension" increment="1684227914303">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="Eclipse Public License v1.0"/>
