@@ -2,3 +2,4 @@
 
 -library: enable-emf
 -buildpath: de.jena.publictransport.simulator.sensinact.mmt.util;version=latest
+Bundle-Version: 1.0.0-SNAPSHOT
