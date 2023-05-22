@@ -36,7 +36,7 @@ pipeline  {
 				step([$class: 'DockerBuilderPublisher',
 			        			dockerFileDirectory: '.',
 								cloud: 'docker',
-								tagsString: """registry-git.jena.de/scj/dim-broker:1.0.${VERSION}-${NAME}""",
+								tagsString: """registry-git.jena.de/scj/ibis-simulator:1.0.${VERSION}-${NAME}""",
 								pushOnSuccess: true,
 								pushCredentialsId: 'github-jena'])
             }
