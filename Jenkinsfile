@@ -1,35 +1,45 @@
 pipeline  {
+	environment {
+         NAME = "ibis_simulator"
+         VERSION = "${env.BUILD_ID}"
+    }
+    
     agent any
 
     tools {
-        jdk 'OpenJDK11'
+        jdk 'OpenJDK17'
     }
     options {
         buildDiscarder(logRotator(numToKeepStr: '5'))
     }
 
     stages {
-        stage('Main branch release') {
-            when { 
-                branch 'main' 
-            }
+    	stage('Export simulator') {
             steps {
-                echo "I am building on ${env.BRANCH_NAME}"
-                sh "./gradlew clean build release -Drelease.dir=$JENKINS_HOME/repo.gecko/release/de.jena.simulator --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
-            }
+                echo "I am exporting de.jena.publictransport.simulator"
+                sh "./gradlew clean de.jena.publictransport.simulator:export"
+	    	}
         }
-        stage('Snapshot branch release') {
-            when { 
-                branch 'snapshot'
-            }
-            steps  {
-                echo "I am building on ${env.JOB_NAME}"
-                sh "./gradlew clean release --info --stacktrace -Dmaven.repo.local=${WORKSPACE}/.m2"
-                sh "mkdir -p $JENKINS_HOME/repo.gecko/snapshot/de.jena.simulator"
-                sh "rm -rf $JENKINS_HOME/repo.gecko/snapshot/de.jena.simulator/*"
-                sh "cp -r cnf/release/* $JENKINS_HOME/repo.gecko/snapshot/de.jena.simulator"
+        stage('Docker image') {
+	    	when{
+				branch 'main'
+	    	}
+
+            steps {
+				step([$class: 'DockerBuilderPublisher',
+                                dockerFileDirectory: '.',
+                                cloud: 'docker',
+                                tagsString: """devel.data-in-motion.biz:6000/gecko.io/${NAME}:latest
+                                        devel.data-in-motion.biz:6000/gecko.io/${NAME}:${VERSION}""",
+                                pushOnSuccess: true,
+                                pushCredentialsId: 'dim-nexus'])
+				step([$class: 'DockerBuilderPublisher',
+			        			dockerFileDirectory: '.',
+								cloud: 'docker',
+								tagsString: """registry-git.jena.de/scj/dim-broker:1.0.${VERSION}-${NAME}""",
+								pushOnSuccess: true,
+								pushCredentialsId: 'github-jena'])
             }
         }
     }
-
 }

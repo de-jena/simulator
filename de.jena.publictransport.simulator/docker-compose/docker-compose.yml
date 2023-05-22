@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  mongodb:
+    container_name: mongodb
+    hostname: mongodb
+    image: mongo:4.2
+    ports: 
+      - "27017:27017"
+    networks:
+      - ibis_simulator_network
+  ibis_simulator:
+    container_name: ibis_simulator
+    image: docker.data-in-motion.biz:6000/gecko.io/ibis_simulator:latest
+    tty: true
+    networks:
+      - ibis_simulator_network
+
+networks:
+    ibis_simulator_network:
