@@ -17,7 +17,7 @@ pipeline  {
     	stage('Export simulator') {
             steps {
                 echo "I am exporting de.jena.publictransport.simulator"
-                sh "./gradlew clean de.jena.publictransport.simulator:export"
+                sh "./gradlew clean build de.jena.publictransport.simulator:export"
 	    	}
         }
         stage('Docker image') {
