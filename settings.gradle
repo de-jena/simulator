@@ -3,17 +3,9 @@ pluginManagement {
     id 'biz.aQute.bnd.workspace' version bnd_version
   }
   repositories {
-    maven {
-      url = uri(bnd_snapshots)
-      content {
-        snapshotsOnly()
-        includeGroup('biz.aQute.bnd')
-        includeGroup('biz.aQute.bnd.workspace')
-      }
-    }
-    mavenCentral()
-    gradlePluginPortal()
-    rootProject.name="de.jena.simulator"
+	mavenCentral()
+	gradlePluginPortal()
+   	maven { url bnd_snapshots }
   }
 }
 plugins {
