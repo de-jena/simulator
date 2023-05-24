@@ -9,7 +9,7 @@ RUN mkdir -p ${OPT_DIR} && \
     mkdir -p ${OPT_DIR}/logs && \
     mkdir -p /tmp
 
-COPY build/libs/de.jena.simulator.jar ${OPT_DIR}/
+COPY de.jena.publictransport.simulator/generated/distributions/executable/launch.jar ${OPT_DIR}/
 
 RUN mkdir ${HOME_DIR}
 
@@ -28,4 +28,4 @@ VOLUME ${HOME_DIR}
 WORKDIR ${OPT_DIR}
 USER ${USERNAME}
 
-CMD ["java", "-jar", "/opt/osgi/de.jena.simulator.jar"]
+CMD ["java", "-jar", "/opt/osgi/launch.jar"]
