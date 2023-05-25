@@ -1,0 +1,17 @@
+{
+	":configurator:resource-version": 1,
+	":configurator:symbolicname": "de.jena.simulator.rest",
+	":configurator:version": "0.0.0",
+	"org.apache.felix.http~jenaSimulator": {
+		"org.osgi.service.http.port": "8080",
+		"org.osgi.service.http.host": "0.0.0.0",
+		"org.apache.felix.http.context_path": "simulator/",
+		"org.apache.felix.http.name": "jenaSimulator",
+		"org.apache.felix.http.runtime.init.id": "jenaSimulator"
+	},
+	"JakartarsServletWhiteboardRuntimeComponent~simulator": {
+		"jersey.jakartars.whiteboard.name": "jenaSimulator",
+		"jersey.context.path": "rest",
+		"osgi.http.whiteboard.target": "(id=jenaSimulator)"
+	}
+}

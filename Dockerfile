@@ -1,15 +1,15 @@
 FROM eclipse-temurin:17-jre-alpine
 
-ENV USERNAME=osgi \
-	HOME_DIR=/osgi \
-	OPT_DIR=/opt/osgi \
+ENV USERNAME=simulator \
+	HOME_DIR=/simulator \
+	OPT_DIR=/opt/simulator \
 	GECKO_VERSION=2.0.0
 
 RUN mkdir -p ${OPT_DIR} && \
     mkdir -p ${OPT_DIR}/logs && \
     mkdir -p /tmp
 
-COPY de.jena.publictransport.simulator/generated/distributions/executable/launch.jar ${OPT_DIR}/
+COPY de.jena.publictransport.simulator/generated/distributions/executable/de.jena.publictransport.simulator.docker.jar ${OPT_DIR}/
 
 RUN mkdir ${HOME_DIR}
 
@@ -24,8 +24,9 @@ RUN chown -R ${USERNAME} ${OPT_DIR} && \
 RUN cd ${OPT_DIR}
 
 VOLUME ${HOME_DIR}
+EXPOSE 8080
 
 WORKDIR ${OPT_DIR}
 USER ${USERNAME}
 
-CMD ["java", "-jar", "/opt/osgi/launch.jar"]
+CMD ["java", "-jar", "/opt/simulator/de.jena.publictransport.simulator.docker.jar"]

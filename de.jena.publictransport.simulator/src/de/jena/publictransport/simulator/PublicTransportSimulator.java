@@ -63,7 +63,7 @@ import de.jena.udp.model.trafficos.publictransport.PublicTransportTimeTableEntry
 import de.jena.udp.model.trafficos.publictransport.TOSPublicTransportFactory;
 import org.gecko.emf.json.constants.EMFJs;
 
-@Component(immediate=true, name="PublicTransportSimulator")
+@Component(name="PublicTransportSimulator", service = PublicTransportSimulator.class )
 public class PublicTransportSimulator {
 	
 	@Reference(target = "(id=full)")
@@ -89,6 +89,7 @@ public class PublicTransportSimulator {
 	private final ScheduledExecutorService ses = Executors.newSingleThreadScheduledExecutor();
 	private ScheduledFuture<?> simulationFuture;
 	private ReentrantLock simLock = new ReentrantLock(true);
+	private boolean isRunning;
 	
 	IdNameElement lineRef = TOSCommonFactory.eINSTANCE.createIdNameElement();
 	
@@ -147,6 +148,7 @@ public class PublicTransportSimulator {
 		promiseFactory.submit(() -> {
 			LOGGER.info("Scheduling Simluation");
 			simulationFuture = ses.scheduleAtFixedRate(this::simulate, 0, SIMULATION_INTERVAL_MN, TimeUnit.MINUTES);
+			isRunning = true;
 			return true;
 		});
 	}
@@ -160,7 +162,12 @@ public class PublicTransportSimulator {
 				LOGGER.severe(String.format("Simulation stopping was interrupted"));
 			}
 		}
+		isRunning = false;
 		LOGGER.info("Simulation stopped");
+	}
+	
+	public boolean isRunning() {
+		return isRunning;
 	}
 	
 	private void simulate() {

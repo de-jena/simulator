@@ -14,3 +14,12 @@
 		readOnly			= true;\
 		poll_time 			= -1;\
 		name='SensiNact SDK'
+		
+-plugin.jakarta: \
+    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+        snapshotUrl="https://oss.sonatype.org/content/repositories/snapshots/"; \
+        releaseUrl=https://repo.maven.apache.org/maven2/; \
+        index=${.}/jakarta.maven; \
+        readOnly=true; \
+        poll.time=-1; \
+        name="Jakarta Namespace"

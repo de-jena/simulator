@@ -1,0 +1,3 @@
+-include: base.bndrun
+
+-runbundles.local: de.jena.publictransport.simulator.config.local

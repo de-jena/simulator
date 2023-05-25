@@ -1,6 +1,6 @@
 pipeline  {
 	environment {
-         NAME = "ibis_simulator"
+         NAME = "ibis-simulator"
          VERSION = "${env.BUILD_ID}"
     }
     
@@ -36,7 +36,8 @@ pipeline  {
 				step([$class: 'DockerBuilderPublisher',
 			        			dockerFileDirectory: '.',
 								cloud: 'docker',
-								tagsString: """registry-git.jena.de/scj/ibis-simulator:1.0.${VERSION}-${NAME}""",
+								tagsString: """registry-git.jena.de/scj/${NAME}:${VERSION}
+										registry-git.jena.de/scj/${NAME}:latest""",
 								pushOnSuccess: true,
 								pushCredentialsId: 'github-jena'])
             }

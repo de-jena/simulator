@@ -1,0 +1,3 @@
+-include: base.bndrun
+
+-runbundles.docker: de.jena.publictransport.simulator.config.docker

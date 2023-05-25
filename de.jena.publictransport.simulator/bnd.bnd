@@ -6,9 +6,14 @@
 	org.osgi.util.promise,\
 	org.gecko.osgi.messaging,\
 	de.dim.trafficos.apis,\
-	org.gecko.emf.json
+	org.gecko.emf.json,\
+	org.osgi.service.jakartars,\
+	org.osgi.service.servlet,\
+	jakarta.ws.rs-api
 
 Bundle-Version: 1.0.0.SNAPSHOT
 
 Private-Package: de.jena.publictransport.simulator
--privatepackage: de.jena.publictransport.simulator.helper
+-privatepackage: \
+	de.jena.publictransport.simulator.helper,\
+	de.jena.publictransport.simulator.rest

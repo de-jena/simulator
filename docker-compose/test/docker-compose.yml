@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  mongodb:
+    container_name: mongodb
+    hostname: mongodb
+    image: mongo:4.2
+    env_file:
+      - mongo.env
+    ports: 
+      - "27017:27017"
+    networks:
+      - ibis_simulator_network
+  ibis_simulator:
+    container_name: ibis-simulator
+    #image: devel.data-in-motion.biz:6000/gecko.io/ibis-simulator:latest 
+    image: ibis-simulator
+    env_file:
+      - mqtt.env
+      - mongo.env
+    ports: 
+      - "8080:8080"
+    tty: true
+    networks:
+      - ibis_simulator_network
+
+networks:
+    ibis_simulator_network:

@@ -1,0 +1,15 @@
+{
+  ":configurator:resource-version": 1,
+  
+	"EMFMongoRepositoryConfigurator~simulator": 
+  	{
+	    "mongo.instances": "test",
+	    "test.baseUris": "mongodb://mongodb",
+		"test.baseUris.env": "MONGO_BASE_URI",
+		"test.databases" : "test", 
+		"test.user.env": "MONGO_USERNAME",
+		"test.password.env": "MONGO_PASSWORD",
+		"test.authSource": "admin", 
+		"test.test.repoType" : "PROTOTYPE" 
+	}
+}
