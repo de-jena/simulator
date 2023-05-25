@@ -39,4 +39,16 @@ The topic looks like `5g/sensinact/event/simulator/data/IbisDevice/<tramLineId>-
 
 ## How to run the whole thing?
 
-Just launch the `launch.bndrun` in the `de.jena.publictransport.simualtor`.
+A docker image has been created and it's available at `registry-git.jena.de/scj/ibis-simulator:latest`.
+
+In the root folder of the project there is a `docker-compose/prod` folder, which contains already a `docker-compose.yml` to pull the image and run a container.
+
+The only thing that needs to be done is to complete the settings of the two `.env` files, one for mongodb and one for the mqtt configurations, which are located as well in the `docker-compose/prod` folder.
+
+Once the app is up and running, the simulation starts immediately. 
+
+To check the status of the simulator, and, in case, to stop and start it again, 3 endpoints are available under:
+
++ `http://localhost:8080/simulator/rest/running`: returns whether the simulator is currently running or not;
++ `http://localhost:8080/simulator/rest/stop`: stop the simulator;
++ `http://localhost:8080/simulator/rest/start`: start the simulator.
