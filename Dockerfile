@@ -29,4 +29,4 @@ EXPOSE 8080
 WORKDIR ${OPT_DIR}
 USER ${USERNAME}
 
-CMD ["java", "-jar", "/opt/simulator/de.jena.publictransport.simulator.docker.jar"]
+CMD ["java", "-Dgosh.args=--nointeractive", "-jar", "/opt/simulator/de.jena.publictransport.simulator.docker.jar"]
