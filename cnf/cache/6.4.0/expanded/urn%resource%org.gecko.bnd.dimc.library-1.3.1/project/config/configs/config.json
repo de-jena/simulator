@@ -1,8 +1,0 @@
-{
-  ":configurator:resource-version": 1,
-  
-  "ExampleConfig": 
-  {
-    "your.prop.here": "text" 
-	}
-}
