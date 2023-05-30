@@ -17,6 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
@@ -183,7 +184,7 @@ public class PublicTransportSimulator {
 	}
 	
 	private void doSimulate() {
-		timeInMins = new AtomicInteger(Calendar.getInstance().get(Calendar.HOUR_OF_DAY) * 60 + Calendar.getInstance().get(Calendar.MINUTE));
+		timeInMins = new AtomicInteger(Calendar.getInstance(Locale.GERMANY).get(Calendar.HOUR_OF_DAY) * 60 + Calendar.getInstance().get(Calendar.MINUTE));
 		LOGGER.info("Simulate for minute of day " + timeInMins);
 		List<PublicTransportTimeTableEntry> entries = line2.getTimeTable().stream()
 				.map(tt -> tt.getEntry()).flatMap(tte -> tte.stream())
