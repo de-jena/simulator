@@ -184,7 +184,7 @@ public class PublicTransportSimulator {
 	}
 	
 	private void doSimulate() {
-		timeInMins = new AtomicInteger(Calendar.getInstance(Locale.GERMANY).get(Calendar.HOUR_OF_DAY) * 60 + Calendar.getInstance().get(Calendar.MINUTE));
+		timeInMins = new AtomicInteger(Calendar.getInstance(Locale.GERMANY).get(Calendar.HOUR_OF_DAY) * 60 + Calendar.getInstance(Locale.GERMANY).get(Calendar.MINUTE));
 		LOGGER.info("Simulate for minute of day " + timeInMins);
 		List<PublicTransportTimeTableEntry> entries = line2.getTimeTable().stream()
 				.map(tt -> tt.getEntry()).flatMap(tte -> tte.stream())
