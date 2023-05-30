@@ -57,10 +57,6 @@ public class SensinactEventHandler implements TypedEventHandler<ResourceDataNoti
 		if(logger.isLoggable(Level.INFO)) {
 			logger.log(Level.INFO, String.format("received event on topic %s", topic));
 		}
-		if(topic.endsWith("stopRequested/stopRequested")) {
-			System.out.println("Test " + event.oldValue + " - " + event.newValue);
-			
-		}
 		try {
 			UpdateMessage update = SensinactGenericMessageUtil.createUpdateMessageForType(event.newValue != null ? event.newValue.getClass() : event.type);
 			update.setTimestamp(event.timestamp);

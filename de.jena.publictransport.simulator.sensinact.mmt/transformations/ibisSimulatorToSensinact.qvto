@@ -18,8 +18,8 @@ main() {
 mapping SIMULATOR::PublicTransportDataValue::simulatorToService(): SENSINACT::IbisDevice {
 	
 	var value : PublicTransportDataValueObject = self.value;
-	
-	result.id := "Line2-Trip" + self.timeTableEntryRef.oclAsType(Integer).toString();
+	var lineId : Integer := self.timeTableEntryRef.oclAsType(Integer) + 601;
+	result.id := lineId.toString();
 	result.admin := self.map toAdmin(); 
 	
 	if(value.oclIsTypeOf(SIMULATOR::PublicTransportDoorChange)) {
