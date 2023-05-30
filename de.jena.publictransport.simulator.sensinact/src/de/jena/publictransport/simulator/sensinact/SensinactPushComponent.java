@@ -56,7 +56,7 @@ public class SensinactPushComponent {
 			@Reference(target = "(&(emf.model.name=publictransport)(emf.resource.configurator.name=EMFJson))", scope = ReferenceScope.PROTOTYPE_REQUIRED) ResourceSet resourceSet) {
 		this.resourceSet = resourceSet;
 		try {
-			subscription = messaging.subscribe("public/transport/data/entry/#");
+			subscription = messaging.subscribe("5g/public/transport/data/entry/#");
 			subscription.forEach(this::handlePublicTransportMessage);
 
 		} catch (Exception e) {

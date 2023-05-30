@@ -285,8 +285,8 @@ public class PublicTransportSimulator {
 			resource.getContents().clear();			
 			byte[] content = baos.toByteArray();
 			ByteBuffer buffer = ByteBuffer.wrap(content);
-			LOGGER.info("Sending mqtt to " + "public/transport/data/entry/"+timeTableRef+"/"+dataValueType.getLiteral());
-			messaging.publish("public/transport/data/entry/"+timeTableRef+"/"+dataValueType.getLiteral(), buffer);
+			LOGGER.info("Sending mqtt to " + "5g/public/transport/data/entry/"+timeTableRef+"/"+dataValueType.getLiteral());
+			messaging.publish("5g/public/transport/data/entry/"+timeTableRef+"/"+dataValueType.getLiteral(), buffer);
 		} catch (Exception e) {
 			LOGGER.log(Level.SEVERE, "Error publishing position request via MQTT", e);
 		}

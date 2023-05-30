@@ -19,7 +19,7 @@ mapping SIMULATOR::PublicTransportDataValue::simulatorToService(): SENSINACT::Ib
 	
 	var value : PublicTransportDataValueObject = self.value;
 	
-	result.id := "Line 2 - Trip Number " + self.timeTableEntryRef.oclAsType(Integer).toString();
+	result.id := "Line2-Trip" + self.timeTableEntryRef.oclAsType(Integer).toString();
 	result.admin := self.map toAdmin(); 
 	
 	if(value.oclIsTypeOf(SIMULATOR::PublicTransportDoorChange)) {
@@ -42,7 +42,7 @@ mapping SIMULATOR::PublicTransportDataValue::toAdmin() : PROVIDER::Admin {
 	location := self.toLocation();	
 	if(location.oclIsUndefined()){
 //	We set a timestamp much older than the current one (1st Jan 2023) when the location is null, so sensinact will not update it!
-		metadata += toMetadataTimestamp(getInstant(1672547040000L));
+		metadata += toMetadataTimestamp(getInstant(1672547040000));
 	};
 }
 
