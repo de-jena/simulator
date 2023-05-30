@@ -39,4 +39,11 @@ public class DateToInstantBlackbox {
 		return null;
 	}
 
+	@Operation(description = "Converts from milliseconds to Instant")
+	public Instant getInstant(Long millis) {
+		if(millis !=  null) {
+			return Instant.ofEpochMilli(millis);
+		}
+		return null;
+	}
 }

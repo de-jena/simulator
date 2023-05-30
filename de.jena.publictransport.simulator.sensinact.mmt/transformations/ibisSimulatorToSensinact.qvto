@@ -19,7 +19,7 @@ mapping SIMULATOR::PublicTransportDataValue::simulatorToService(): SENSINACT::Ib
 	
 	var value : PublicTransportDataValueObject = self.value;
 	
-	result.id := self.lineRef.id + "-" + self.timeTableEntryRef.oclAsType(Integer).toString();
+	result.id := "Line 2 - Trip Number " + self.timeTableEntryRef.oclAsType(Integer).toString();
 	result.admin := self.map toAdmin(); 
 	
 	if(value.oclIsTypeOf(SIMULATOR::PublicTransportDoorChange)) {
@@ -37,8 +37,13 @@ mapping SIMULATOR::PublicTransportDataValue::simulatorToService(): SENSINACT::Ib
 
 mapping SIMULATOR::PublicTransportDataValue::toAdmin() : PROVIDER::Admin {
 	
-	friendlyName := self.type.toString();
+	var eClass := PROVIDER::Admin.oclAsType(ECORE::EClass);
+	friendlyName := "Line 2 - Trip Number " + self.timeTableEntryRef.oclAsType(Integer).toString();
 	location := self.toLocation();	
+	if(location.oclIsUndefined()){
+//	We set a timestamp much older than the current one (1st Jan 2023) when the location is null, so sensinact will not update it!
+		metadata += toMetadataTimestamp(getInstant(1672547040000L));
+	};
 }
 
 query SIMULATOR::PublicTransportDataValue::toLocation() : PROVIDER::EGeoJsonObject {
@@ -138,6 +143,12 @@ helper toMetadata(friendlyNameParam : String, unit : String, hide : String, type
 		};
 	};	
 	return res;
+}
+
+helper toMetadataTimestamp(value : EInstant): PROVIDER::FeatureMetadata {
+	var entry := toMetadataEntry(PROVIDER::Admin.oclAsType(ECORE::EClass).getEStructuralFeature("location"), "Admin", null, "true", null);
+	entry.value.timestamp := value;
+	return entry;
 }
 
 helper toCustomMetadata(key : String, theValue : String): PROVIDER::FeatureCustomMetadata{

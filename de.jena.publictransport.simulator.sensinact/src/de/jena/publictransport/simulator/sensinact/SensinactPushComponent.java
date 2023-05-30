@@ -36,6 +36,7 @@ import org.osgi.util.pushstream.PushStream;
 import de.jena.model.sensinact.ibis.IbisAdmin;
 import de.jena.model.sensinact.ibis.IbisDevice;
 import de.jena.model.sensinact.ibis.IbisSensinactFactory;
+import de.jena.model.sensinact.ibis.TripInfo;
 import de.jena.udp.model.trafficos.publictransport.PublicTransportDataValue;
 
 @Component(immediate=true, name="PublicTransportSensinactPushComponent")
@@ -92,11 +93,17 @@ public class SensinactPushComponent {
 		if(pool != null) {
 			ModelTransformator transformator = pool.poll();
 			try {
-				IbisDevice push = (IbisDevice) transformator.startTransformation(value);				
+				IbisDevice push = (IbisDevice) transformator.startTransformation(value);	
 				
 				IbisAdmin ibisAdmin = IbisSensinactFactory.eINSTANCE.createIbisAdmin();
 				ibisAdmin.setDeviceType("SIMULATED-TRAM");
 				push.setIbisAdmin(ibisAdmin);
+				
+				TripInfo tripInfo = IbisSensinactFactory.eINSTANCE.createTripInfo();
+				tripInfo.setLineName("Jena Ost - Winzerla");
+				tripInfo.setLineNumber(2);
+				tripInfo.setTripNumber(value.getTimeTableEntryRef());
+				push.setTripInfo(tripInfo);
 				
 				sensinact.pushUpdate(push);
 			} catch(Exception e) {
