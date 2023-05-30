@@ -13,8 +13,9 @@ services:
       - ibis_simulator_network
   ibis_simulator:
     container_name: ibis-simulator
-    #image: devel.data-in-motion.biz:6000/gecko.io/ibis-simulator:latest 
-    image: ibis-simulator
+    image: devel.data-in-motion.biz:6000/gecko.io/ibis-simulator:latest 
+    environment:
+      - TZ=Europe/Berlin
     env_file:
       - mqtt.env
       - mongo.env

@@ -14,6 +14,8 @@ services:
   ibis_simulator:
     container_name: ibis-simulator
     image: registry-git.jena.de/scj/ibis-simulator:latest
+    environment:
+      - TZ=Europe/Berlin
     env_file:
       - mqtt.env
       - mongo.env
