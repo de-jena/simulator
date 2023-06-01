@@ -54,9 +54,9 @@ public class SensinactEventHandler implements TypedEventHandler<ResourceDataNoti
 	
 	@Override
 	public void notify(String topic, ResourceDataNotification event) {
-		if(logger.isLoggable(Level.INFO)) {
-			logger.log(Level.INFO, String.format("received event on topic %s", topic));
-		}
+//		if(logger.isLoggable(Level.INFO)) {
+//			logger.log(Level.INFO, String.format("received event on topic %s", topic));
+//		}
 		try {
 			UpdateMessage update = SensinactGenericMessageUtil.createUpdateMessageForType(event.newValue != null ? event.newValue.getClass() : event.type);
 			update.setTimestamp(event.timestamp);
@@ -81,9 +81,9 @@ public class SensinactEventHandler implements TypedEventHandler<ResourceDataNoti
 	}
 
 	private void send(String topic, EObject object) {
-		if(logger.isLoggable(Level.INFO)) {
-			logger.log(Level.INFO, String.format("forwarding event on topic %s", topic));
-		}
+//		if(logger.isLoggable(Level.INFO)) {
+//			logger.log(Level.INFO, String.format("forwarding event on topic %s", topic));
+//		}
 		
 		ResourceSet set = setObjects.getService();
 		

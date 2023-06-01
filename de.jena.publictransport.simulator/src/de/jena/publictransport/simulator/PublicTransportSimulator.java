@@ -37,6 +37,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.gecko.emf.json.constants.EMFJs;
 import org.gecko.osgi.messaging.MessagingService;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -46,8 +47,10 @@ import org.osgi.service.component.annotations.ReferenceScope;
 import org.osgi.util.promise.PromiseFactory;
 
 import de.dim.trafficos.apis.PublicTransportService;
+import de.jena.publictransport.simulator.helper.InBetweenStopsHelper;
 import de.jena.publictransport.simulator.helper.PublicTransportSimulatorHelper;
 import de.jena.udp.model.trafficos.common.IdNameElement;
+import de.jena.udp.model.trafficos.common.Position;
 import de.jena.udp.model.trafficos.common.TOSCommonFactory;
 import de.jena.udp.model.trafficos.publictransport.PublicTransportDataValue;
 import de.jena.udp.model.trafficos.publictransport.PublicTransportDataValueObject;
@@ -59,10 +62,10 @@ import de.jena.udp.model.trafficos.publictransport.PublicTransportDoorCountingTy
 import de.jena.udp.model.trafficos.publictransport.PublicTransportLine;
 import de.jena.udp.model.trafficos.publictransport.PublicTransportPosition;
 import de.jena.udp.model.trafficos.publictransport.PublicTransportStation;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportStop;
 import de.jena.udp.model.trafficos.publictransport.PublicTransportStopRequested;
 import de.jena.udp.model.trafficos.publictransport.PublicTransportTimeTableEntry;
 import de.jena.udp.model.trafficos.publictransport.TOSPublicTransportFactory;
-import org.gecko.emf.json.constants.EMFJs;
 
 @Component(name="PublicTransportSimulator", service = PublicTransportSimulator.class )
 public class PublicTransportSimulator {
@@ -76,8 +79,8 @@ public class PublicTransportSimulator {
 	@Reference
 	PublicTransportService publicTransportService;
 	
-//	This is the simulation interval in minutes
-	private static final int SIMULATION_INTERVAL_MN = 1;
+//	This is the simulation interval in secs
+	private static final int SIMULATION_INTERVAL_SEC = 15;
 	
 	private static final Logger LOGGER = Logger.getLogger(PublicTransportSimulator.class.getName());
 	
@@ -85,7 +88,9 @@ public class PublicTransportSimulator {
 	PromiseFactory promiseFactory = new PromiseFactory(executors);
 	
 	PublicTransportLine line2;
-	AtomicInteger timeInMins;
+	AtomicInteger timeInMins  = new AtomicInteger(-1);
+	AtomicInteger previousTimeInMins = new AtomicInteger(-1);
+	AtomicInteger counterWithinSameMin = new AtomicInteger(-1);
 	
 	private final ScheduledExecutorService ses = Executors.newSingleThreadScheduledExecutor();
 	private ScheduledFuture<?> simulationFuture;
@@ -112,6 +117,38 @@ public class PublicTransportSimulator {
 				.findFirst();
 		if(stationOpt.isPresent()) return stationOpt.get();
 		return null;
+	};
+	
+	Function<PublicTransportTimeTableEntry, PublicTransportStation> findNextStation = tte -> {
+		
+		PublicTransportStation nextStation = tte.getLastStation();
+		long arrivalTime = tte.getEnd();		
+		if(tte.getBegin() > timeInMins.get()) {
+			return tte.getFirstStation();
+		}
+		for(PublicTransportStop stop : tte.getStops()) {
+			if(stop.getExpectedArrivalTime() > timeInMins.get() && stop.getExpectedArrivalTime() < arrivalTime) {
+				nextStation = stop.getStation();
+				arrivalTime = stop.getExpectedArrivalTime();
+			}
+		}
+		return nextStation;
+	};
+	
+	Function<PublicTransportTimeTableEntry, PublicTransportStation> findPreviousStation = tte -> {
+		
+		PublicTransportStation previousStation = tte.getFirstStation();
+		long arrivalTime = tte.getBegin();		
+		if(tte.getEnd() < timeInMins.get()) {
+			return tte.getLastStation();
+		}
+		for(PublicTransportStop stop : tte.getStops()) {
+			if(stop.getExpectedArrivalTime() < timeInMins.get() && stop.getExpectedArrivalTime() > arrivalTime) {
+				previousStation = stop.getStation();
+				arrivalTime = stop.getExpectedArrivalTime();
+			}
+		}
+		return previousStation;
 	};
 	
 	@Activate
@@ -148,7 +185,7 @@ public class PublicTransportSimulator {
 		lineRef.setName(line2.getName());
 		promiseFactory.submit(() -> {
 			LOGGER.info("Scheduling Simluation");
-			simulationFuture = ses.scheduleAtFixedRate(this::simulate, 0, SIMULATION_INTERVAL_MN, TimeUnit.MINUTES);
+			simulationFuture = ses.scheduleAtFixedRate(this::simulate, 0, SIMULATION_INTERVAL_SEC, TimeUnit.SECONDS);
 			isRunning = true;
 			return true;
 		});
@@ -184,14 +221,17 @@ public class PublicTransportSimulator {
 	}
 	
 	private void doSimulate() {
+		previousTimeInMins.set(timeInMins.get());
 		timeInMins = new AtomicInteger(Calendar.getInstance(Locale.GERMANY).get(Calendar.HOUR_OF_DAY) * 60 + Calendar.getInstance(Locale.GERMANY).get(Calendar.MINUTE));
-		LOGGER.info("Simulate for minute of day " + timeInMins);
+		if(previousTimeInMins.get() == timeInMins.get()) counterWithinSameMin.incrementAndGet();
+		else counterWithinSameMin.set(-1);
+//		LOGGER.info("Simulate for minute of day " + timeInMins + " Previous simulated minute " + previousTimeInMins);
 		List<PublicTransportTimeTableEntry> entries = line2.getTimeTable().stream()
 				.map(tt -> tt.getEntry()).flatMap(tte -> tte.stream())
 				.filter(tte -> tte.getEnd() >= timeInMins.get() && tte.getBegin() <= timeInMins.get()).toList();
 		
 		if(entries.isEmpty()) {
-			LOGGER.info("No simulated trams are running at this time. Please, wait a couple of minutes.");
+			LOGGER.info("No simulated tram is running at this time. Simulator data works from 7am to 8pm. If you are in that range, just wait a couple of minutes.");
 			return;
 		}
 		generateAndSendData(entries);
@@ -206,7 +246,24 @@ public class PublicTransportSimulator {
 	private void doGenerateAndSendData(PublicTransportTimeTableEntry e) {
 		PublicTransportStation station = findStation.apply(e);
 		if(station == null) {
-			LOGGER.info("We are not at a stop. Generate random stop request msg...");
+//			Position update
+			PublicTransportStation previousStation = findPreviousStation.apply(e);
+			PublicTransportStation nextStation = findNextStation.apply(e);
+			Double[] coord = InBetweenStopsHelper.getInBetweenStops(previousStation.getName(), nextStation.getName(), e.getIndex());
+			LOGGER.info("-----------Trip " + e.getIndex() + " is in between stops " + previousStation.getName() + " and " + nextStation.getName() + "--------------------------");
+//			LOGGER.info("previousStation: " + previousStation.getName() + " - Next Station: " + nextStation.getName());
+//			LOGGER.info("Coord between stops " + coord[0] + "," + coord[1]);
+			PublicTransportPosition positionMsg = TOSPublicTransportFactory.eINSTANCE.createPublicTransportPosition();
+			Position position = TOSCommonFactory.eINSTANCE.createPosition();
+			position.setLatitude(coord[1]);
+			position.setLongitude(coord[0]);
+			positionMsg.setPosition(position);
+			positionMsg.setName("Position Update for Line 2 - trip " + e.getIndex());
+			positionMsg.setId(UUID.randomUUID().toString());
+			positionMsg.setAtStop(false);
+			positionMsg.setStationName("N/A");
+			doSendData(e.getIndex(), PublicTransportDataValueType.GEO_INFO, positionMsg);
+			
 			int random = getRandomInt(0, 1);
 			if(random == 0) return;
 			PublicTransportStopRequested stopRequested = TOSPublicTransportFactory.eINSTANCE.createPublicTransportStopRequested();
@@ -216,6 +273,20 @@ public class PublicTransportSimulator {
 			doSendData(e.getIndex(), PublicTransportDataValueType.STOP_REQUESTED, stopRequested);
 			return;
 		}
+//		We are at a stop but we already sent everything for that stop, so we only need to send a Position update
+		else if(timeInMins.get() == previousTimeInMins.get()) {
+//			LOGGER.info("-----------STILL AT A STOP " + e.getIndex() + "--------------------------");
+			PublicTransportPosition position = TOSPublicTransportFactory.eINSTANCE.createPublicTransportPosition();
+			position.setPosition(station.getPosition());
+			position.setName("Position Update for Line 2 - trip " + e.getIndex());
+			position.setId(UUID.randomUUID().toString());
+			position.setAtStop(true);
+			position.setStationName(station.getName());
+			doSendData(e.getIndex(), PublicTransportDataValueType.GEO_INFO, position);
+			return;
+		}
+//		We are at a certain stop for the first time -> we need to send all the updates
+		LOGGER.info("-----------Trip " + e.getIndex() + " arrived at stop " + station.getName() + "--------------------------");
 		PublicTransportPosition position = TOSPublicTransportFactory.eINSTANCE.createPublicTransportPosition();
 		position.setPosition(station.getPosition());
 		position.setName("Position Update for Line 2 - trip " + e.getIndex());
@@ -264,8 +335,10 @@ public class PublicTransportSimulator {
 			doorClose.setName("Door Change Update for Line 2 - trip " + e.getIndex() + " - door " + doorClose.getDoorId());
 			doorClose.setId(UUID.randomUUID().toString());
 			doSendData(e.getIndex(), PublicTransportDataValueType.DOOR_CHANGE, doorClose);
-
 		}
+		
+//		Reset counter in InBetweenStopsHelper for that trip when we arrive at a stop (to avoid sending by mistakes wrong coord between stops at the next round)
+		InBetweenStopsHelper.resetCounterForTrip(e.getIndex(), station.getName());
 	}
 	
 	private void doSendData(int timeTableRef, PublicTransportDataValueType dataValueType, PublicTransportDataValueObject dataValueObject) {
@@ -286,7 +359,7 @@ public class PublicTransportSimulator {
 			resource.getContents().clear();			
 			byte[] content = baos.toByteArray();
 			ByteBuffer buffer = ByteBuffer.wrap(content);
-			LOGGER.info("Sending mqtt to " + "5g/public/transport/data/entry/"+timeTableRef+"/"+dataValueType.getLiteral());
+//			LOGGER.info("Sending mqtt to " + "5g/public/transport/data/entry/"+timeTableRef+"/"+dataValueType.getLiteral());
 			messaging.publish("5g/public/transport/data/entry/"+timeTableRef+"/"+dataValueType.getLiteral(), buffer);
 		} catch (Exception e) {
 			LOGGER.log(Level.SEVERE, "Error publishing position request via MQTT", e);

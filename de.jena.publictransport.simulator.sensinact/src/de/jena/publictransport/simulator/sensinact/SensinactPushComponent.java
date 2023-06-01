@@ -33,11 +33,11 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceScope;
 import org.osgi.util.pushstream.PushStream;
 
-import de.jena.model.sensinact.ibis.IbisAdmin;
 import de.jena.model.sensinact.ibis.IbisDevice;
 import de.jena.model.sensinact.ibis.IbisSensinactFactory;
 import de.jena.model.sensinact.ibis.TripInfo;
 import de.jena.udp.model.trafficos.publictransport.PublicTransportDataValue;
+import de.jena.udp.model.trafficos.publictransport.PublicTransportPosition;
 
 @Component(immediate=true, name="PublicTransportSensinactPushComponent")
 public class SensinactPushComponent {
@@ -72,7 +72,6 @@ public class SensinactPushComponent {
 		try {
 
 			byte[] content = message.payload().array();
-			System.out.println("Recieved Public Transport Message: " + message.topic());
 			ByteArrayInputStream bais = new ByteArrayInputStream(content);
 			resource.load(bais, saveOptions);
 			PublicTransportDataValue value = (PublicTransportDataValue) resource.getContents().get(0);
@@ -94,15 +93,17 @@ public class SensinactPushComponent {
 			ModelTransformator transformator = pool.poll();
 			try {
 				IbisDevice push = (IbisDevice) transformator.startTransformation(value);	
-				
-				IbisAdmin ibisAdmin = IbisSensinactFactory.eINSTANCE.createIbisAdmin();
-				ibisAdmin.setDeviceType("SIMULATED-TRAM");
-				push.setIbisAdmin(ibisAdmin);
-				
 				TripInfo tripInfo = IbisSensinactFactory.eINSTANCE.createTripInfo();
 				tripInfo.setLineName("Jena Ost - Winzerla");
+				tripInfo.setDeviceType("SIMULATED-TRAM");
 				tripInfo.setLineNumber(2);
 				tripInfo.setTripNumber(value.getTimeTableEntryRef());
+				tripInfo.setDeviceNumber(value.getTimeTableEntryRef()+601);
+				if(value.getValue() instanceof PublicTransportPosition) {
+					PublicTransportPosition positionMsg = (PublicTransportPosition) value.getValue();
+					tripInfo.setAtStop(positionMsg.isAtStop());
+					tripInfo.setStopName(positionMsg.getStationName());
+				}
 				push.setTripInfo(tripInfo);
 				
 				sensinact.pushUpdate(push);
