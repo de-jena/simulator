@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1685601491709">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1685616240881">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="de.jena.udp.trafficos.common.model"/>
@@ -229,12 +229,12 @@
       <attribute name="osgi.identity" value="de.jena.ibis.sensinact.model"/>
       <attribute name="documentation" value="https://github.com/de-jena/ibis-ip"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.0.202306010638-SNAPSHOT" type="Version"/>
+      <attribute name="version" value="1.0.0.202306011043-SNAPSHOT" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.sensinact.model.core.provider"/>
       <attribute name="bundle-symbolic-name" value="de.jena.ibis.sensinact.model"/>
-      <attribute name="bundle-version" value="1.0.0.202306010638-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202306011043-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="de.jena.model.sensinact.ibis"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="2089374079,-1948374594,1876090645,468365966,-29192019,-1952108949,83665755,607076234,603188579,-2047027162,-2044361492,1136382041,-1457456553,1425955268,-1172636269,969279299,-518798996,-1884613934,696061476,1450250742,550073073,1575163539,-1923478059" type="List&lt;Long&gt;"/>
@@ -242,7 +242,7 @@
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="de.jena.model.sensinact.ibis,org.eclipse.emf.common.notify,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.impl,org.eclipse.sensinact.model.core.provider.impl"/>
       <attribute name="bundle-symbolic-name" value="de.jena.ibis.sensinact.model"/>
-      <attribute name="bundle-version" value="1.0.0.202306010638-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202306011043-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="de.jena.model.sensinact.ibis.impl"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="-1936109505,-1187385090,2123768533,-348810802,69421165,-1083910357,622351387,-197967670,63658531,235613030,1021576492,1717359129,-520041193,311349843,1295877123,-983563860,-880529390,-362532252,-1288831690,-400070479,-224236717,-1923478059" type="List&lt;Long&gt;"/>
@@ -250,17 +250,17 @@
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="de.jena.model.sensinact.ibis,org.eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl,org.eclipse.emf.ecore,org.eclipse.emf.ecore.util,org.eclipse.sensinact.model.core.provider"/>
       <attribute name="bundle-symbolic-name" value="de.jena.ibis.sensinact.model"/>
-      <attribute name="bundle-version" value="1.0.0.202306010638-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202306011043-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.package" value="de.jena.model.sensinact.ibis.util"/>
       <attribute name="version" value="1.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="-1905838898,1869680711,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.0.202306010638-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202306011043-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="de.jena.ibis.sensinact.model"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.0.202306010638-SNAPSHOT" type="Version"/>
+      <attribute name="bundle-version" value="1.0.0.202306011043-SNAPSHOT" type="Version"/>
       <attribute name="osgi.wiring.host" value="de.jena.ibis.sensinact.model"/>
     </capability>
     <capability namespace="de.jena.model.sensinact.ibis"/>
@@ -270,10 +270,10 @@
       <attribute name="genModel" value="/model/ibis.genmodel"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="259390" type="Long"/>
+      <attribute name="size" value="265312" type="Long"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
       <attribute name="url" value="de.jena.ibis.sensinact.model/de.jena.ibis.sensinact.model-1.0.0.jar"/>
-      <attribute name="osgi.content" value="56EF75EF6B8101F9C85AEA9F80221D946EA2EF2B0BF4D9ACDCD69A9C1B6661DD"/>
+      <attribute name="osgi.content" value="BF7481B0376B338573ED80CC759616E5E86A54F6613C30A8251D062DE6B1C842"/>
     </capability>
     <capability namespace="osgi.service">
       <directive name="uses" value="org.eclipse.emf.ecore"/>

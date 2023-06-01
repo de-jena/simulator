@@ -23,14 +23,66 @@ mapping SIMULATOR::PublicTransportDataValue::simulatorToService(): SENSINACT::Ib
 	result.admin := self.map toAdmin(); 
 	
 	if(value.oclIsTypeOf(SIMULATOR::PublicTransportDoorChange)) {
-		result.doorStateData := value.oclAsType(SIMULATOR::PublicTransportDoorChange).map toDoorState();
-		result.doorStateData.timestamp := getInstant(self.timestamp);
+		if(value.oclAsType(SIMULATOR::PublicTransportDoorChange).doorId = "0") {
+			result.door1State := value.oclAsType(SIMULATOR::PublicTransportDoorChange).map toDoorState();
+			result.door1State.timestamp := getInstant(self.timestamp);
+		} else if(value.oclAsType(SIMULATOR::PublicTransportDoorChange).doorId = "1") {
+			result.door2State := value.oclAsType(SIMULATOR::PublicTransportDoorChange).map toDoorState();
+			result.door2State.timestamp := getInstant(self.timestamp);
+		} else if(value.oclAsType(SIMULATOR::PublicTransportDoorChange).doorId = "2") {
+			result.door3State := value.oclAsType(SIMULATOR::PublicTransportDoorChange).map toDoorState();
+			result.door3State.timestamp := getInstant(self.timestamp);
+		} else if(value.oclAsType(SIMULATOR::PublicTransportDoorChange).doorId = "3") {
+			result.door4State := value.oclAsType(SIMULATOR::PublicTransportDoorChange).map toDoorState();
+			result.door4State.timestamp := getInstant(self.timestamp);
+		}
+		
 	} else if(value.oclIsTypeOf(SIMULATOR::PublicTransportDoorCount)) {
-		result.doorCountingStateData := value.oclAsType(SIMULATOR::PublicTransportDoorCount).map toDoorCount();
-		result.doorCountingStateData.timestamp := getInstant(self.timestamp);
+		if(value.oclAsType(SIMULATOR::PublicTransportDoorCount).doorId = "0") {
+			result.door1CountingState := value.oclAsType(SIMULATOR::PublicTransportDoorCount).map toDoorCount();
+			result.door1CountingState.timestamp := getInstant(self.timestamp);
+		} else if(value.oclAsType(SIMULATOR::PublicTransportDoorCount).doorId = "1") {
+			result.door2CountingState := value.oclAsType(SIMULATOR::PublicTransportDoorCount).map toDoorCount();
+			result.door2CountingState.timestamp := getInstant(self.timestamp);
+		} else if(value.oclAsType(SIMULATOR::PublicTransportDoorCount).doorId = "2") {
+			result.door3CountingState := value.oclAsType(SIMULATOR::PublicTransportDoorCount).map toDoorCount();
+			result.door3CountingState.timestamp := getInstant(self.timestamp);
+		} else if(value.oclAsType(SIMULATOR::PublicTransportDoorCount).doorId = "3") {
+			result.door4CountingState := value.oclAsType(SIMULATOR::PublicTransportDoorCount).map toDoorCount();
+			result.door4CountingState.timestamp := getInstant(self.timestamp);
+		}
+		
 	} else if(value.oclIsTypeOf(SIMULATOR::PublicTransportStopRequested)) {
 		result.stopRequested := value.oclAsType(SIMULATOR::PublicTransportStopRequested).map toStopRequested();
 		result.stopRequested.timestamp := getInstant(self.timestamp);		
+	};
+	
+	if(result.door1State.oclIsUndefined()) {
+		result.door1State := setAsUnchanged("DoorState").oclAsType(SENSINACT::DoorState);
+	};
+	if(result.door2State.oclIsUndefined()) {
+		result.door2State := setAsUnchanged("DoorState").oclAsType(SENSINACT::DoorState);
+	};
+	if(result.door3State.oclIsUndefined()) {
+		result.door3State := setAsUnchanged("DoorState").oclAsType(SENSINACT::DoorState);
+	};
+	if(result.door4State.oclIsUndefined()) {
+		result.door4State := setAsUnchanged("DoorState").oclAsType(SENSINACT::DoorState);
+	};
+	if(result.door1CountingState.oclIsUndefined()) {
+		result.door1CountingState := setAsUnchanged("DoorCount").oclAsType(SENSINACT::PassengerCountingDoorCountingState);
+	};
+	if(result.door2CountingState.oclIsUndefined()) {
+		result.door2CountingState := setAsUnchanged("DoorCount").oclAsType(SENSINACT::PassengerCountingDoorCountingState);
+	};
+	if(result.door3CountingState.oclIsUndefined()) {
+		result.door3CountingState := setAsUnchanged("DoorCount").oclAsType(SENSINACT::PassengerCountingDoorCountingState);
+	};
+	if(result.door4CountingState.oclIsUndefined()) {
+		result.door4CountingState := setAsUnchanged("DoorCount").oclAsType(SENSINACT::PassengerCountingDoorCountingState);
+	};
+	if(result.stopRequested.oclIsUndefined()) {
+		result.stopRequested := setAsUnchanged("StopRequested").oclAsType(SENSINACT::StopRequested);
 	};
 	
 }
@@ -61,20 +113,74 @@ mapping SIMULATOR::PublicTransportDoorChange::toDoorState() : SENSINACT::DoorSta
 	serviceName := "DoorStateService";
 	serviceOperation := "SpecificDoorState";
 	
+	metadata += toMetadataEntry(eClass.getEStructuralFeature("serviceName"), "DoorState", null, "true", null);
+	metadata += toMetadataEntry(eClass.getEStructuralFeature("serviceOperation"), "DoorState", null, "true", null);
+	
 	doorId := self.doorId;
 	if(self.doorId.oclIsUndefined().not()){
-		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorId"), "DoorStateService", null, "true", null);
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorId"), "DoorState", null, "true", null);
 	};
 	
 	doorState := self.type.toString();
 	if(self.type.toString().oclIsUndefined().not()){
-		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorState"), "DoorStateService", null, "true", null);
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorState"), "DoorState", null, "true", null);
 	};
 	
 	exitSide := self.doorSide.toString();
 	if(self.doorSide.toString().oclIsUndefined().not()){
-		metadata += toMetadataEntry(eClass.getEStructuralFeature("exitSide"), "DoorStateService", null, "true", null);
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("exitSide"), "DoorState", null, "true", null);
 	};
+}
+
+helper setAsUnchanged(eClassName : String) : PROVIDER::Service {
+	if(eClassName = "DoorState") {
+		var eClass := SENSINACT::DoorState.oclAsType(ECORE::EClass);
+		var res := object SENSINACT::DoorState {
+			serviceName := null;
+			serviceOperation := null;
+			doorId := null;
+			doorState := null;
+			exitSide := null;
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "serviceName", "DoorState");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "serviceOperation", "DoorState");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "doorId", "DoorState");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "doorState", "DoorState");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "exitSide", "DoorState");
+		};
+		return res;
+		
+	} else if(eClassName = "DoorCount") {
+		var eClass := SENSINACT::PassengerCountingDoorCountingState.oclAsType(ECORE::EClass);
+		var res := object SENSINACT::PassengerCountingDoorCountingState {
+			serviceName := null;
+			serviceOperation := null;
+			doorId := null;
+			doorCountingType := null;
+			exitSide := null;
+			_in := null;
+			_out := null;
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "serviceName", "PassengerCountingDoorCountingState");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "serviceOperation", "PassengerCountingDoorCountingState");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "doorId", "PassengerCountingDoorCountingState");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "doorCountingType", "PassengerCountingDoorCountingState");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "exitSide", "PassengerCountingDoorCountingState");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "in", "PassengerCountingDoorCountingState");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "out", "PassengerCountingDoorCountingState");
+		};
+		return res;
+	} else if(eClassName = "StopRequested") {
+		var eClass := SENSINACT::StopRequested.oclAsType(ECORE::EClass);
+		var res := object SENSINACT::StopRequested {
+			serviceName := null;
+			serviceOperation := null;
+			stopRequested := null;
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "serviceName", "StopRequested");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "serviceOperation", "StopRequested");
+			metadata += toMetadataTimestamp(getInstant(1672547040000), eClass, "stopRequested", "StopRequested");	
+		};
+		return res;
+	};
+	return null;
 }
 
 mapping SIMULATOR::PublicTransportDoorCount::toDoorCount() : SENSINACT::PassengerCountingDoorCountingState {
@@ -82,30 +188,33 @@ mapping SIMULATOR::PublicTransportDoorCount::toDoorCount() : SENSINACT::Passenge
 
 	serviceName := "PassengerCountingService";
 	serviceOperation := "DoorCount";
+	
+	metadata += toMetadataEntry(eClass.getEStructuralFeature("serviceName"), "PassengerCountingDoorCountingState", null, "true", null);
+	metadata += toMetadataEntry(eClass.getEStructuralFeature("serviceOperation"), "PassengerCountingDoorCountingState", null, "true", null);
 		
 	doorId := self.doorId;
 	if(self.doorId.oclIsUndefined().not()){
-		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorId"), "PassengerCountingService", null, "true", null);
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorId"), "PassengerCountingDoorCountingState", null, "true", null);
 	};
 	
 	doorCountingType := self.type.toString();
 	if(self.type.toString().oclIsUndefined().not()){
-		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorCountingType"), "PassengerCountingService", null, "true", null);
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("doorCountingType"), "PassengerCountingDoorCountingState", null, "true", null);
 	};
 	
 	exitSide := self.doorSide.toString();
 	if(self.doorSide.toString().oclIsUndefined().not()){
-		metadata += toMetadataEntry(eClass.getEStructuralFeature("exitSide"), "PassengerCountingService", null, "true", null);
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("exitSide"), "PassengerCountingDoorCountingState", null, "true", null);
 	};
 	
 	_in := self._in;
 	if(self._in.oclIsUndefined().not()){
-		metadata += toMetadataEntry(eClass.getEStructuralFeature("in"), "PassengerCountingService", null, "true", null);
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("in"), "PassengerCountingDoorCountingState", null, "true", null);
 	};
 	
 	_out := self._out;
 	if(self._out.oclIsUndefined().not()){
-		metadata += toMetadataEntry(eClass.getEStructuralFeature("out"), "PassengerCountingService", null, "true", null);
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("out"), "PassengerCountingDoorCountingState", null, "true", null);
 	};
 }
 
@@ -114,9 +223,13 @@ mapping SIMULATOR::PublicTransportStopRequested::toStopRequested() : SENSINACT::
 
 	serviceName := "PassengerInfoService";
 	serviceOperation := "StopRequested";
+	
+	metadata += toMetadataEntry(eClass.getEStructuralFeature("serviceName"), "StopRequested", null, "true", null);
+	metadata += toMetadataEntry(eClass.getEStructuralFeature("serviceOperation"), "StopRequested", null, "true", null);
+		
 	stopRequested := self.stopRequested;
 	if(self.stopRequested.oclIsUndefined().not()){
-		metadata += toMetadataEntry(eClass.getEStructuralFeature("stopRequested"), "PassengerInfoService", null, "true", null);
+		metadata += toMetadataEntry(eClass.getEStructuralFeature("stopRequested"), "StopRequested", null, "true", null);
 	};
 }
 
@@ -147,6 +260,12 @@ helper toMetadata(friendlyNameParam : String, unit : String, hide : String, type
 
 helper toMetadataTimestamp(value : EInstant): PROVIDER::FeatureMetadata {
 	var entry := toMetadataEntry(PROVIDER::Admin.oclAsType(ECORE::EClass).getEStructuralFeature("location"), "Admin", null, "true", null);
+	entry.value.timestamp := value;
+	return entry;
+}
+
+helper toMetadataTimestamp(value : EInstant, eClass : EClass, featureName : String, friendlyName : String): PROVIDER::FeatureMetadata {
+	var entry := toMetadataEntry(eClass.getEStructuralFeature(featureName), friendlyName, null, "true", null);
 	entry.value.timestamp := value;
 	return entry;
 }
